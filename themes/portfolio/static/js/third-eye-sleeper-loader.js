@@ -13,6 +13,7 @@
  function Scene() {
      this.reset = false;
      this.inverted = false;
+     this.interacted = false;
      this.pageLoadTime = pageLoadTime();
      this.ratio = window.devicePixelRatio || 1;
  }
@@ -409,16 +410,25 @@
      -------------- */
 
      // Increment eye
-     if (this.oeil.mvt > this.oeil.min + 3) {
-         this.oeil.mvt -= this.oeil.loadSpeed() * 2;
-         //this.reveillage = false;
-     } else if (!this.reveillage) {
-         this.reveillage = true;
-         this.reveil.count = this.reveil.max;
-         //aLazer.activated = true;
-         //this.chargeRayonActivated = true;
+     if(this.interacted) {
+         if (this.oeil.mvt > this.oeil.min + 3) {
+             this.oeil.mvt -= this.oeil.loadSpeed() * 2;
+             //this.reveillage = false;
+         } else if (!this.reveillage) {
+             this.reveillage = true;
+             this.reveil.count = this.reveil.max;
+             //aLazer.activated = true;
+             //this.chargeRayonActivated = true;
+         };
      };
 
+
+     /* Check if we interacted with sleeper
+      -------------- */
+     if(!this.interacted && (this.x !== this.oX || this.x !== this.oX)) {
+         console.log('interact with sleeper');
+         this.interacted = true;
+     }
 
  };
 

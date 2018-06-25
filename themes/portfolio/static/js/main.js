@@ -40,14 +40,28 @@
     // Show a coming soon page if region id matches
     project.regionCheck = function() {
         getJSON('//freegeoip.net/json/',  function(err, data) {
-            
+
             if (err != null) {
+                console.log('get ip-api')
                 console.error(err);
+                // Try with ip-api
+                getJSON('http//ip-api.com/json/',  function(err, data) {
+                    if (err != null) {
+                        console.error(err);
+                    } else {
+                        if(data.regionName == "Occitanie") {
+                            setComingSoon();
+                        }
+                    }
+                });
             } else {
-                
-                if(data.region_code == "OCC" && data.ip !== "92.93.46.141") {
-                        u('.main-wrapper').replace('<div class="center absolute-fit fade-top fade-top-active"><p class="temp h1 absolute-center" style="margin-top: 0;color: rgb(6, 13, 47);">Coming soon</p></div>');
+                if(data.region_code == "OCC") {
+                    setComingSoon();
                 }
+            }
+
+            function setComingSoon () {
+                u('.main-wrapper').replace('<div class="center absolute-fit fade-top fade-top-active"><p class="temp h1 absolute-center" style="margin-top: 0;color: rgb(6, 13,                     47);">Coming soon</p></div>');
             }
         });
     }
