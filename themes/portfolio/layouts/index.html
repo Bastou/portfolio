@@ -1,0 +1,10 @@
+{{ define "title"}} {{ .Site.Title}} {{end}}
+{{ define "data-namespace"}}homepage{{end}}
+{{ define "header"}} {{ partial "header" .}} {{end}}
+{{ define "main"}}
+<div class="intro" itemscope itemtype="http://schema.org/Person">
+    {{.Content}}
+    {{ partial "home-nav-social" }}
+</div><!-- /.intro -->
+{{ end }}
+{{ define "footer"}} {{ partial "footer" .}} {{end}}

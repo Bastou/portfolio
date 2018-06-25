@@ -1,0 +1,22 @@
+<div class="mobile-navbar hidden-lg-up">
+    <ul class="mobile-navbar__nav primary-nav nav navbar-nav">
+        {{ partial "nav" . }}
+        <li  class="nav-item nav-item--contact">
+          <a id="contact-link" class="link nav-link link-fx-wrapper" href="#social" >
+              <span class="link-fx--feedback"></span>
+              <span class="link-fx2" data-letters="Contact">Contact</span>
+          </a>
+          <ul id="contact-menu" class="nav-item--contact__menu open">
+            <!-- TODO: Ajouter en config à TOML avec ref class-icons -->
+            <li ><a href="mailto:bastien.cornier@gmail.com?subject=Apero?" target="_blank"><span class="icon-mail"></span></a></li>
+            <li ><a class="no-barba" href="/resume/CV-bastien-cornier.pdf" target="_blank"><span class="icon-contact-cv no-icon" >CV</span></a></li>
+            <li ><a href="http://fr.linkedin.com/in/bastiencornier" target="_blank"><span class="icon-linkedin"></span></a></li>
+            <li ><a href="https://twitter.com/BastienCornier" target="_blank"><span class="icon-twitter"></span></a></li>
+            <li ><a href="http://codepen.io/erevan" target="_blank"><span class="icon-codepen"></span></a></li>
+            <li ><a href="https://github.com/Bastou" target="_blank"><span class="icon-github"></span></a></li>
+            <li ><a href="https://www.behance.net/bastiencornier" target="_blank"><span class="icon-behance"></span></a></li>
+          </ul><!-- /.navbar-social -->
+        </li><!-- /.nav-item -->
+    </ul>
+</div>
+<!-- /.mobile-navbar -->

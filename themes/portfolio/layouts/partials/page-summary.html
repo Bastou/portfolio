@@ -1,0 +1,13 @@
+{{ if(eq .Title  "SKLTN") }}
+	<div class="container-window-spacing smFadeIn mbs">
+		<p class="p-bigger medium mtl">{{ i18n "divers" }}</p>
+	</div><!-- /.container-window-spacing -->
+{{end}}
+<li class="post-summary listing__item fx-bg-reveal-trigger smFadeInTop" itemscope itemtype="http://schema.org/CreativeWork" >
+    <h2 class="listing__item__title post-summary__title">
+        <a href="{{ .Permalink }}" itemprop="headline" data-transition="postIn"><span>{{ .Title }}</span></a>
+    </h2>
+	<div class="listing__item__thumb fx-bg-reveal-wrapper">
+		<div class="fx-bg-reveal overlay-dark-pe bg-img" style="background-image:url('{{ .Site.BaseURL }}img/{{.Params.thumbnail}}')"></div><!-- /.listing__item__thumb -->
+	</div><!-- /.listing__item__thumb -->
+</li>

@@ -1,0 +1,15 @@
+{{ define "title"}} {{ .Title}} {{end}}
+{{ define "bodyclass" }}page-listing theme-negatif{{ end }}
+{{ define "header"}} {{ partial "header" .}} {{end}}
+{{ define "main" }}
+
+<div class="content content--listing">
+
+	<ul class="listing">
+
+	 {{ range .Paginator.Pages.ByWeight }} {{ partial "page-summary-lab" . }} {{ end }}
+	  <!-- <section>{{ partial "pagination" .}}</section> -->
+	</ul>
+</div><!-- /.content -->
+
+{{ end }} 

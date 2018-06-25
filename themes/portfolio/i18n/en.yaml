@@ -1,0 +1,14 @@
+- id: project
+  translation: "Project"
+- id: role
+  translation: "Role"
+- id: credits
+  translation: "Credits"
+- id: agence
+  translation: "Agency"
+- id: pagenotfound
+  translation: "Ooops, page not found"
+- id: creditsagence
+  translation: "I only made the front-end part of those websites. Credits goes to Orealys agency."
+- id: divers
+  translation: "Miscellaneous:"

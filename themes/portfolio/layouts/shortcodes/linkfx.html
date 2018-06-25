@@ -1,0 +1,6 @@
+<a class="link link-fx-wrapper" href="{{ if .Get "external"}}{{.Get "href"}}{{else}}{{ .Get "href" | absLangURL }}{{ end }}" {{ with .Get "data-transition"}}data-transition="{{.}}"{{ end }} {{ if .Get "external"}}target="_blank"{{ end }} {{ with .Get "itemprop"}}itemprop="{{.}}"{{end}}>
+    <span class="link-fx--feedback"></span>
+    <span class="link-fx3" data-letters="{{ .Get "title" }}">
+        <span class="link-fx3__highlight"></span> {{ .Get "title" }}
+    </span>
+</a>

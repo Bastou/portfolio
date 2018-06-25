@@ -1,0 +1,117 @@
+{{ define "title"}} {{ .Title}} {{end}}
+{{ define "data-namespace"}}post{{end}}
+{{ define "header"}} {{ partial "header" .}} {{end}}
+
+{{ define "main"}}
+<article class="content post" itemscope itemtype="http://schema.org/BlogPosting">
+		<div id="hero-image" class="article-banner banner banner-img-wrapper overlay-dark-pe">
+			<div id="article-banner-image" class="article-banner__img banner-img banner01 bg-img" style="background-image:url('{{ $.Site.BaseURL }}img/{{ with .Params.image }}{{ . }}{{ else }}default.jpg{{ end }}')" alt="couverture {{.Title}}"></div>
+		</div>
+	<div class="post-content" id="post-box">
+		<header class="post__header">
+			<div class="titre-page-wrapper container smFadeInTop">
+				<h1 class="titre-page">{{.Title }}</h1>
+			</div>
+			<div class="section rea-intro container">
+				<div class="row">
+					<div class="col-sm-9 rea-main-infos flex-column d-f ">
+						{{ if .Params.tags }}
+						<p class="tags smFadeInTop" itemprop="tags">{{ delimit .Params.tags ", " }}</p><!-- /.tags -->
+						{{ end }}
+						{{ with .Params.Description }}
+						<p class="texte-chapeau smFadeInTop" itemprop="description">{{ . | safeHTML }}</p><!-- /.texte-chapeau -->
+						{{ end }}
+						<div class="btn-group mt-auto smFadeInTop">
+							{{ if  .Params.projet_url }}
+							<a href="{{ .Params.projet_url }}" class="btn link link-fx-wrapper " >
+								<span class="link-fx--feedback"></span>
+								<span class="btn__inner" data-letters="{{ with .Params.projet_url_titre }}{{.}}{{else}}En savoir plus{{end}}">{{ with .Params.projet_url_titre }}{{.}}{{else}}En savoir plus{{end}}</span>
+							</a>
+							{{ end }}
+
+							{{ if  .Params.projet_url2 }}
+							<a href="{{ .Params.projet_url2 }}" class="btn link link-fx-wrapper " >
+								<span class="link-fx--feedback"></span>
+								<span class="btn__inner" data-letters="{{ with .Params.projet_url2_titre }}{{.}}{{else}}En savoir plus{{end}}">{{ with .Params.projet_url2_titre }}{{.}}{{else}}En savoir plus{{end}}</span>
+							</a>
+							{{ end }}
+						</div>
+					</div><!-- /.col-9 -->
+					<div class="col-sm-3  rea-side-infos smFadeInTop">
+						<dl class="description-list">
+							{{ if .Params.projet_type }}
+							<dt>{{ i18n "project" }}</dt>
+							<dd>{{ .Params.projet_type }}</dd>
+							{{ end }}
+							<dt>Date</dt>
+							<dd>{{ partial "time_month-year.html" . }}</dd>
+							{{ with .Params.role }}
+							<dt>{{ i18n "role" }}</dt>
+							<dd>{{ . }}</dd>
+							{{end}}
+							{{if and .Params.credit_client .Params.credit_agence  }}
+							<dt>{{ i18n "credits" }}</dt>
+							<dd>
+								<dl class="inline">
+									<dt>Client </dt>
+									<dd>{{ .Params.credit_client }}</dd>
+									<dt>{{ i18n "agence" }} </dt>
+									<dd>{{ .Params.credit_agence }}</dd>
+								</dl>
+							</dd>
+							{{ end }}
+						</dl>
+					</div><!-- /.col-3 -->
+				</div><!-- /.row -->
+			</div>
+		</header>
+		<div class="smFadeInTop" id="post" itemprop="articleBody">
+
+			{{.Content | safeHTML}}
+			
+		</div>
+
+		{{ if or .PrevInSection .NextInSection }} 
+			<section class="smFadeInTop">
+				<div class="pagination post-summary">
+					<div class="pagination__thumbs">
+					{{ if .PrevInSection }}
+						<div class="pagination-thumb pagination-thumb--left fx-bg-reveal-wrapper" data-page-orientation="left">
+							<div class="pagination-thumb__img fx-bg-reveal bg-img"  style="background-image:url('{{ $.Site.BaseURL }}img/{{ with .PrevInSection.Params.thumbnail }}{{ . }}{{ else }}default.jpg{{ end }}')"></div><!-- /.pagination-thumb__img -->
+						</div>
+					{{ end }}
+					{{ if .NextInSection }}
+						<div class="pagination-thumb pagination-thumb--right fx-bg-reveal-wrapper" data-page-orientation="right">
+							<div class="pagination-thumb__img fx-bg-reveal bg-img"  style="background-image:url('{{ $.Site.BaseURL }}img/{{ with .NextInSection.Params.thumbnail }}{{ . }}{{ else }}default.jpg{{ end }}')"></div><!-- /.pagination-thumb__img -->
+						</div>
+					{{ end }}
+					</div><!-- /.thumb -->
+					<div class="container pagination__items">
+						<div class="row">
+						{{ if .PrevInSection }}
+							<a href="{{.PrevInSection.Permalink}}" class="col-6 pagination-item d-f align-items-center" data-page-orientation="left" >
+								<span class="pagination-item__text btn btn--movetext btn--left link link-fx-wrapper post-summary__title" >
+									<span class="btn__inner" data-letters="{{.PrevInSection.Title}}">{{.PrevInSection.Title}}</span>
+								</span>
+							</a><!-- /.col-2 -->
+						{{ end }}
+						{{ if .NextInSection }}
+							<a href="{{.NextInSection.Permalink}}" class="{{ if not .PrevInSection }}offset-md-6 col-6{{ end }} col-6 pagination-item d-f align-items-center justify-content-end" data-page-orientation="right" >
+								<span class="pagination-item__text btn btn--movetext link link-fx-wrapper post-summary__title" >
+									<span class="btn__inner" data-letters="{{.NextInSection.Title}}">{{.NextInSection.Title}}</span>
+								</span>
+							</a><!-- /.col-2 -->
+						{{ end }}
+						</div><!-- /.row -->
+					</div><!-- /.pagination -->
+				</div><!-- /.container -->
+
+			</section>
+		{{ end }}
+		<div id="post-content-fx-cover"></div><!-- /.fx-cover -->
+	</div>
+
+</article>
+
+{{ end }}
+{{ define "footer"}} {{ partial "footer.html" .}} {{ end }}

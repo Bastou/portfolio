@@ -1,0 +1,125 @@
+/**
+ * Description:  Styles css pour Bastien Cornier
+ * Version: 1.0.0
+ * Created: 2017-05-05
+ * Last update: 2017-05-05
+ * Author: bastien c <o>
+ *
+ * 
+ * Summary:
+ *   1. VENDORS
+ *	- 1.1. BOOTSTRAP
+ *	2. BASE
+ *	- 1.1. RESET
+ *	- 1.2. TYPOGRAPHY
+ *	- 1.3. HELPERS
+ *	3. LAYOUT
+ *    - 3.1. LAYOUT
+ *    - 3.2. GRID
+ *    - 3.3. BLOCKS
+ *    - 3.4. HEADER
+ *    - 3.5. FORMS
+ *    - 3.6. FOOTER
+ *	4. COMPONENTS
+ *    - 4.1. NAVIGATION
+ *    - 4.2. ICONS
+ *    - 4.3. BUTTONS
+ *    - 4.4. DROPDOWN
+ *    - 4.5. ANIMATEMIN
+ *    - 4.6. LISTE
+ *    - 4.7. PAGINATION
+ *    - 4.8. FX
+ *  5. PAGES 
+ *    - 5.1. ACCUEIL
+ *    - 5.2. SITEMAP
+ *	6. THEMES 
+ *    - 6.1. THEMES NEGATIF
+ 
+ */
+
+ /*
+  * Note: Use $section-name to search a specific section
+  *
+  *
+  *
+  */
+
+
+
+
+
+// // // Sass utilities
+@import "helpers/_variables.scss";//nom complet du fichier car erreur sass (possibles collision avec un autre fichier) [idem pr les autres ds le mm cas]
+@import "helpers/functions";
+@import "helpers/mixins";
+@import "bourbon/bourbon";
+@import "components/animation";
+
+/* ==========================================================================
+   $VENDORS
+   ========================================================================== */
+
+// // Vendors and external stylesheets
+@import "vendors/bootstrap/bootstrap";
+
+/* ==========================================================================
+   $BASE
+   ========================================================================== */
+
+// Base stuff
+@import "base/_reset.scss";
+@import "base/_typography.scss";
+@import "helpers/helpers";
+
+/* ==========================================================================
+   $LAYOUT
+   ========================================================================== */
+
+// // Layout related stylesheets
+@import "layout/layout";
+@import "layout/grid";
+@import "layout/_blocs.scss"; 
+@import "layout/header";
+@import "layout/forms";
+@import "layout/_footer.scss";
+
+
+
+
+
+/* ==========================================================================
+   $COMPONENTS
+   ========================================================================== */
+
+// // Components and modules
+@import "components/fx";
+@import "components/navigation";
+@import "components/pagination";
+@import "components/listing";
+
+
+@import "components/icons";
+
+@import "components/_buttons.scss";
+@import "components/dropdown";
+
+
+
+
+
+/* ==========================================================================
+   $PAGES
+   ========================================================================== */
+
+// // Page-specific stylesheets
+@import "pages/accueil";
+@import "pages/sitemap";
+
+
+/* ==========================================================================
+   $THEMES
+   ========================================================================== */
+
+// // theme-specific stylesheets
+@import "themes/theme-negatif";
+

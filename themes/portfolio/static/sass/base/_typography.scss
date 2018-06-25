@@ -1,0 +1,666 @@
+/* $TYPOGRAPHY
+========================================================================== */
+
+//@import '//fonts.googleapis.com/css?family=Merriweather:400,500,700';
+@include font-face("Brandon Grotesque", "../font/brandon_blk-webfont",900);
+@include font-face("Brandon Grotesque", "../font/brandon_bld-webfont",700);
+@include font-face("Brandon Grotesque", "../font/brandon_med-webfont",500);
+@include font-face("Brandon Grotesque", "../font/brandon_reg-webfont",400);
+@include font-face("Brandon Grotesque", "../font/brandon_light-webfont",300);
+
+
+html {
+	font-size: 62.5%;
+}
+
+body {
+	font-family: $font-stack-common;
+	@include rem('font-size', $base-font-size);
+	line-height: $text-line-height;
+	color: $base-text-color;
+	font-weight: $light;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+p {
+	margin: 0 0 $paragraph-spacing;
+	&:empty {
+		margin:0;
+	}
+}
+
+.p-like {
+	@extend p;
+	font-size: $base-font-size;
+	font-family: $font-stack-common;
+	color: $base-text-color;
+	text-transform: inherit;
+}
+
+input,
+label,
+select,
+button,
+textarea {
+	font-family: $font-stack-common;
+}
+
+h1, .h1,
+h2, .h2,
+h3, .h3,
+h4, .h4,
+h5, .h5,
+h6, .h6 {
+	font-family: $font-stack-headings;
+	font-weight: inherit;
+	margin: 1.414em 0 0.5em;
+  	line-height: 1.2;
+	a {
+		color: inherit;
+	}
+}
+
+
+h1, .h1 {
+	@include rem('font-size', $h1-size);	
+}
+
+h2, .h2 {
+	@include rem('font-size', $h2-size);	
+}
+
+h3, .h3 {
+	@include rem('font-size', $h3-size);	
+}
+
+h4, .h4 {
+	@include rem('font-size', $h4-size);	
+}
+
+
+a {
+	color: $dominant-color;
+	text-decoration: none;
+	@include base-transition();
+	&:hover {
+		color: darken($dominant-color, 10%);
+		text-decoration: none;
+	}
+	&:focus {
+		color: darken($dominant-color, 15%);
+		text-decoration: none;
+	}
+}
+
+address {
+	margin: 0 0 $paragraph-spacing;
+}
+
+/* LES TITRES
+----------------------------------------------------------------------------------------*/
+
+.titre-page {
+	font-weight: 700;
+	@media #{$max-small} {
+		@include fontSize(30,40);
+	}
+}
+
+.titre-section, .titre-section2 {
+	@include rem('font-size', $section-size);
+	font-weight: 700;
+}
+
+.titre-bloc {
+	@include fontSize($h4-size);
+	font-weight: 600;
+}
+
+
+/* CONTENUS TEXTES
+----------------------------------------------------------------------------------------*/
+
+.texte-chapeau {
+	@extend .h4;
+    line-height: 1.5;
+}
+
+.texte-en-avant {
+	    color: $dominant-color;
+	    @include rem('font-size', $h3-size);
+}
+
+.text-categorie {
+	color: $dominant-color;
+	@include rem('font-size', $text-size);
+	font-weight: 600;
+	text-transform: uppercase;
+}
+
+.text-legende{
+	@include rem('font-size', $text-size);
+	font-weight: 300;	
+	font-style:italic;
+	color:#999;
+}
+
+small, .font_small, .p-smaller  {font-size: 0.707em;}
+
+.p-bigger {
+	@include rem(font-size, $p-bigger-size);
+}
+.p-bigger-l {
+	font-size: 1.2em;
+}
+.p-fatter{
+	font-weight: 800;
+}
+
+.quote {
+	@include fontSize(16, 26);
+	display: block;
+	position: relative;
+	padding: 30px 0 20px 0;
+	&:before, &:after {
+		content: '\201C';
+		font-family: 'Poppins', serif;
+		@include rem(font-size, 7rem);
+		font-weight: 400;
+		position: absolute;
+	}
+	&:before {
+		top: 0px;
+		left: 0px;
+	}
+	&:after {
+		right: 0px;
+		bottom: 0px;
+		transform: rotate(180deg);
+	}
+}
+
+.label {
+	color: $dominant-color;
+	@include fontSize(16, 16);
+	font-weight: 700;
+	text-transform: uppercase;
+}
+
+.tags {
+	color: $grey;
+	@include rem(font-size, $p-bigger-l-size);
+	font-weight: 500;
+}
+
+.citation {
+	font-family: $font-stack-headings;
+	font-size: $p-bigger-l-size;
+	@include rem(font-size, $p-bigger-l-size);
+	line-height: 1.5em;
+	font-weight: 300;
+	font-style: italic;
+	text-align: center !important;
+}
+
+/* Text formaters
+----------------------------------------------------------------------------------------*/
+
+/* colors */
+
+.base-color {
+	color: $base-text-color;
+}
+
+.dominant-color {
+	color: $dominant-color;
+}
+
+.color1 {
+	color: $color1;
+}
+
+.color2 {
+	color: $color2;
+}
+
+.base-black {
+	color: $base-black;
+}
+
+.red{
+	color: $dominant-color;
+}
+
+.white{
+	color: #FFF !important; 
+}
+
+
+
+/* Font weights */
+
+.light {
+	font-weight: $light;
+}
+
+.thin {
+	font-weight: $thin;
+}
+
+.normal {
+	font-weight: $normal;
+}
+
+.medium {
+	font-weight: $medium;
+}
+
+.semi-bold {
+	font-weight: $semi-bold;
+}
+
+.bold, strong {
+	font-weight: $bold;
+}
+
+.extra-bold {
+	font-weight: $extra-bold;
+}
+
+
+/* Text transform */
+
+.uppercase, .majuscule {
+	text-transform: uppercase;
+}
+
+.lowercase {
+	text-transform: lowercase;
+}
+
+.em {
+	font-family: Georgia, Cambria, serif;
+	font-style: italic;
+	color: $dominant-color;
+}
+
+.exergue {
+	color: $dominant-color;
+	font-weight: $bold;
+}
+
+.pre {
+	color: #FFF;
+	font-family: $font-stack-headings;
+	font-size: 15px;
+}
+
+hr {
+	margin: 20px 0 40px;
+}
+
+.underline {
+	&:after {
+		@include line('false', $base-black, 30px);
+	}
+}
+
+.red-underline {
+	position: relative;
+	&:after {
+		@include line('false', $dominant-color, 100%);
+		z-index: -1;
+		height: 7px;
+		top: 72%;
+	}
+}
+
+.underline-dominant-color {
+	border-bottom: 1px solid $dominant-color;
+}
+
+.link-externe{
+	border-bottom: dotted 1px $dominant-color;
+}
+
+/* font family */
+.font-stack-headings {
+	font-family: $font-stack-headings ;	
+}
+
+
+/* TYPO PAGES / COMPONENTS
+========================================================================== */
+
+
+/* HEADER
+----------------------------------------------------------------------------------------*/
+
+/* Nav
+------------------------------------------*/
+
+.primary-nav, .nav-social {
+	color: $base-text-color;
+	> li {
+		a {
+			@include rem('font-size', $nav-link-size);
+			font-family: $font-stack-common;
+			font-weight: 700;
+		}
+	}
+}
+
+
+/* Bandeau
+----------------------------------------------------------------------------------------*/
+
+.banner__text span {
+	display: block;
+}
+
+.banner__text__title {
+	color: #FFF;
+	@include fontSize(100,90);
+	font-weight: 700;
+	@media #{$max-medium} {
+		@include fontSize(40);
+	}
+}
+
+.banner__text__subtitle {
+	@include fontSize(60,60);
+	color: #ffffff;
+	margin-bottom: 15px;
+	@include text-shadow(0px, 3px, 5px, rgba(0,0,0,0.3));
+	@media #{$max-small} {
+		@include fontSize(30);
+	}
+}
+
+
+/* Breadcrumb
+----------------------------------------------------------------------------------------*/
+
+.breadcrumb {
+	text-align: left;
+	max-width: 100%;
+	overflow:hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	margin-bottom: 40px;
+	header & {
+		line-height: $breadcrumb-height;
+	}
+	a, span {
+		color: $base-text-color;
+		@include fontSize(14,20);
+		font-weight: 700;
+		text-transform: uppercase;
+	}
+	.breadcrumb_last, .separator, a:not(:first-child) {
+		margin-left: 20px;
+		@media #{$max-small} {
+			margin-left: 5px;
+		}
+
+	}
+	.breadcrumb_last, .separator{
+		color: $dominant-color;
+	}
+	.separator {
+		font-family: "consolas", sans-serif;
+	}
+}
+
+/* FOOTER
+----------------------------------------------------------------------------------------*/
+
+footer {
+	font-family: $font-stack-common;
+	@include fontSize(16,26);
+	a {
+		&:hover {
+			color: $dominant-color;
+		}
+	}
+}
+
+.footer__nav {
+	a {
+		color: $base-text-color;
+	}
+}
+
+/* PAGE CONTENT
+----------------------------------------------------------------------------------------*/
+
+/* LISTES
+------------------------------------------*/
+
+
+// Inline turns list items into inline-block
+.list-inline {
+	@include list-unstyled;
+	margin-left: -10px;
+
+	> li {
+		display: inline-block;
+
+		> a {
+			display: inline-block;
+			padding-left: 10px;
+			padding-right: 10px;
+		}
+	}
+}
+
+ul[class^="liste"], 
+ol[class^="liste"],
+.liste,
+.content ul{
+	padding-left: 0;
+	margin-bottom: $paragraph-spacing;
+
+	>li {
+		padding: 5px 0 5px 1em;
+		text-indent: -.7em;
+		line-height: $text-line-height;
+		&:before {
+			content: "\002022";
+			font-family: "consolas", sans-serif;
+			font-weight: $bold;
+			position: relative;
+			top: -1px;
+			padding-right:7px;
+		}
+		a:hover {
+			color: $dominant-color;
+			text-decoration: underline;
+		}
+		ul {
+			margin-left: 20px;
+		}
+	}
+	&.liste--border {
+		>li {
+			padding: 10px 0 10px 1em;
+			&:not(:first-child) {
+				border-top: 1px solid $grey2;
+			}
+		}
+	}
+	
+	//>Plus despace entre les item
+	&.liste--aere{
+		line-height:21px;
+		>li{
+			//padding-top:11px;
+			//padding-bottom:11px;
+		}
+	}
+}
+
+ul.liste-puce,
+.content ul {
+	>li {
+		&:before {
+			content: "\002022";
+			color: $dominant-color;
+		}
+	}
+}
+
+
+ul.liste-fleche,
+.content ul.liste-fleche {
+	>li {
+		&:before {
+			content: ">";
+			color: $dominant-color;
+		}
+	}
+}
+
+ul.liste-item-espace {
+	>li {
+		margin-bottom: 20px;
+	} 
+}
+
+ul.liste-border {
+	@extend .liste;
+	>li {
+		@include fontSize(15);
+		padding-top: 10px;
+		padding-bottom: 10px;
+		border-bottom: 1px solid $light-grey;
+		&:first-child {
+			border-top: 1px solid $light-grey;
+		}
+		&:before {
+			color: $dominant-color;
+		}
+		a {
+			color: $base-color;
+		}
+	}
+}
+
+
+
+// [converter] extracted as `@mixin list-unstyled` for libsass compatibility
+ul.list-unstyled {
+	@include list-unstyled;
+	li {
+		padding-left: 0 !important;
+		text-indent: 0 !important;
+		&:before {
+			content: "";
+		}
+	}
+}
+
+ol.liste-number {
+	counter-reset: numerotation;
+	
+	>li {
+    	counter-increment: numerotation; /* on incrémente le compteur à chaque nouveau li */
+
+		&:before {
+			content: counter(numerotation)'.'; /* on affiche le compteur */
+			color: $dominant-color;
+		}
+	}
+}
+
+// Liste description
+
+.description-list {
+	> dt {
+		@extend .font-stack-headings;
+	}
+
+	> dt + dd {
+		padding-bottom: 10px;
+		margin-bottom: 10px;
+		border-bottom: 1px solid rgba($base-text-color, 0.25);
+	}
+	dt {
+		
+		font-weight: 700;
+	}
+	dd > dl {
+		dt {
+			margin-left: 10px;
+			&:before {
+				content: "_ ";
+			}
+			&:after {
+				content: " :";
+			}
+		}
+	}
+}
+
+// Aligning some dl, dt 
+dl.inline dd {
+  display: inline;
+  margin: 0;
+}
+dl.inline dd:after{
+  display: block;
+  content: '';
+}
+dl.inline dt{
+  display: inline-block;
+  min-width: 65px;
+}
+
+
+/* SECTIONS
+------------------------------------------*/
+
+.section-text {
+	p {
+		text-align: justify;
+		@include rem('font-size', 16px);
+		line-height: 1.5em;
+	}
+	h2,h3,h4,h5,h6 {
+		&:first-child {
+			margin-top: 0;
+		}
+	}
+}
+
+/* ACCUEIL
+----------------------------------------------------------------------------------------*/
+
+.intro {
+    font-family: $font-stack-headings;
+    font-size: $introText-size;
+    line-height: 1.8em;
+    font-weight: 700;
+	@media #{$max-tiny} {
+		font-size: 0.8em;
+		line-height: 2.7em;
+	}
+    &__pre {
+	font-family: $font-stack-common;
+	font-weight: 400;
+	font-size: 1.1em;
+
+    	position: relative;
+    	padding-left: 30px;
+    	&:before {
+    		content: "";
+    		position: absolute;
+    		left: 0;
+    		@include centerer('vertical');
+    		width: 16px;
+    		height: 4px;
+    		background-color: $base-color;
+    	}
+    }
+}

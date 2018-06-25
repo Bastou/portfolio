@@ -1,0 +1,30 @@
+{{ define "title"}} {{ .Title}} {{end}}
+{{ define "header"}} {{ partial "header" .}} {{end}}
+
+{{ define "main" }}
+<article class="content">
+	<header>
+		<div class="banner banner-img-wrapper overlay-dark-pe">
+			<div class="banner-img banner01" style="background-image:url('{{ with .Params.image }}{{ $.Site.BaseURL }}img/{{ . }}{{ else }}http://placehold.it/1920x540/cccccc?text=Bandeau+1920x540{{ end }}')"></div>
+<!-- 			<div class="banner__text">
+				<h2>
+					<span class="banner__text__title">Les bourses actives</span>
+				</h2>
+			</div> -->
+		</div>
+		<div class="titre-page-wrapper container">
+			<h1 class="titre-page">{{.Title }}</h1>
+			{{ with .Params.description }}
+			<p>{{.}}<br></p>
+			{{end}}
+		</div>
+		<!-- /.titre-page-wrapper -->
+	</header>
+		{{.Content}}
+	</div><!-- /.container -->
+</article>
+{{ end }} 
+
+{{ define "footer" }} 
+{{ partial "footer" . }} 
+{{ end }}

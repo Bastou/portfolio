@@ -1,0 +1,337 @@
+/* $HEADER
+========================================================================== */
+
+.header-main {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: $border-window-spacing #{$border-window-spacing - $bootstrap-padding} 0;
+    @media #{$max-small} {
+        margin: $border-window-spacing-sm;
+    }
+}
+
+
+/* TOPBAR
+----------------------------------------------------------------------------------------*/
+
+.header-main__top {
+    height: $headertop-height;
+    background: $light-grey;
+    @media #{$max-small} {
+        display: none;
+    }
+    .container {
+        height: 100%;
+    }
+}
+
+nav.social-networks {
+    padding: 7px 20px 0;
+    li {
+        line-height: 25px;
+    }
+    a {
+        color: $grey;
+    }
+}
+
+.header-main form.searchform {
+    position: relative;
+    width: 100%;
+    max-width: 240px;
+    input.inputsearch {
+        height: 100%;
+    }
+    .form-control {
+        border-radius: 0;
+    }
+}
+
+
+/* NAVBAR
+----------------------------------------------------------------------------------------*/
+
+.navbar {
+    padding: 0;
+}
+
+.main-navbar {
+    position: relative;
+    z-index: $zindex-navbar;
+    height: $navigation-height;
+    line-height: $navigation-height;
+    @media #{$max-small} {
+        height: $navigation-height-mobile;
+        line-height: $navigation-height-mobile;
+    }
+    .container-xl,
+    &__inner {
+        height: 100%;
+        @media #{$max-small} {
+            padding: 0;
+        }
+    }
+    .navbar {
+        height: 100%;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+        @media #{$max-large} {
+            justify-content: flex-end
+        }
+    }
+}
+
+
+/* NAVBAR BRAND
+------------------------------------------*/
+
+.navbar-brand {
+    padding: 0;
+    transition: none;
+    height: 100%;
+    @media #{$max-large} {
+        margin-right: auto;
+    }
+    > img, #logo-main {
+        display: inline-block;
+        vertical-align: middle;
+        height: 100%;
+        width: auto;
+        max-width: 300px;
+        vertical-align: top;
+        margin-top: -4px;
+        // transition: all 0.3s;
+        @media #{$max-small} {
+            width: 130px;
+            height: auto;
+            vertical-align: middle;
+        }
+    }
+    .sticky & {
+        margin-top: 0;
+        // Animation shorthand works the same as the CSS3 animation shorthand
+        //@include animation(slide_down 0.7s);
+        @media #{$min-small} {
+            height: $navigation-height;
+        }
+    }
+}
+
+/* LOGO
+------------------------------------------*/
+
+#logo-main path {
+    fill : #373737;
+}
+
+/* NAVBAR NAVIGATION
+------------------------------------------*/
+
+$border-color: rgba(255, 255, 255, 0.4);
+.primary-nav {
+    margin-left: auto;
+    flex-direction: row;
+    .main-navbar & {
+        @media #{$max-large} {
+            visibility: hidden;
+            opacity: 0;
+            @include base-transition();
+        }
+    }
+    .nav-item {
+        position: relative;
+        & + .nav-item {
+            margin-left: 0;
+        }
+            position: static;
+            float: none;
+    }
+    .nav-link {
+        color: rgba($base-text-color, $navlink-opacity);
+        padding: 0 15px;
+        white-space: nowrap;
+        @media #{$max-large} {
+            padding: 0 10px;
+        }
+    }
+    .sub-nav {
+        .dropdown {
+            &:before {
+                @media #{$min-large} {
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
+.nav-link {
+    outline: none;
+    text-decoration: none;
+}
+
+
+
+/* NAVBAR ITEMS
+------------------------------------------*/
+
+.navbar-item {
+    height: 100%;
+    @media #{$max-large} and #{$min-small} {
+        margin-left: 30px;
+    }
+    @media #{$max-small} {
+        margin-left: 15px;
+    }
+}
+
+.nav-social {
+    position: relative;
+    top: -3px;
+    // TODO: Move the type style in typography.scss ?
+    font-size: $nav-link-size;
+    margin-left: 45px;
+    .main-navbar & {
+        @media #{$max-small} {
+            display: none;
+        }
+    }
+     > li > a {
+     	padding-left: 7.5px;
+     	padding-right: 7.5px;
+     }
+    // Icon size fix
+    .icon-behance {
+        font-size: 1.15em;
+        position: relative;
+        top: 2.4px;
+    }
+    .icon-twitter {
+        font-size: 1.1em;
+        position: relative;
+        top: 1px;
+    }
+}
+
+.nav-lang {
+    margin-left: 50px;
+    // TODO: Move the type style in typography.scss ?
+    //font-size: $base-font-size;
+    font-size: 1rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    > li > a {
+        padding-left: 2px;
+        padding-right: 2px;
+    }
+    a:not(.current), a:hover  {
+            .link-fx1 {
+                color: rgba($base-color, 0.4);
+            }
+    }
+    a.current {
+        opacity: 0.9;
+    }
+}
+
+
+/* STICKY NAVBAR
+----------------------------------------------------------------------------------------*/
+
+.sticky {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    .boxed & {
+        max-width: $main-container-width;
+        margin: 0 auto;
+    }
+}
+
+
+/* MENU MOBILE
+----------------------------------------------------------------------------------------*/
+
+.mobile-navbar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: $zindex-mobile-navbar;
+    background-color: $body-background;
+    border-top: 1px solid rgba($base-color, 0.05);
+    .home & {
+        display: none;
+    }
+    &__nav {
+        height: $mobile-nav-item_h;
+        justify-content: space-around;
+        .nav-link {
+            padding: #{($mobile-nav-item_h - $mobile-nav-link_h) / 2} 0;
+            text-align: center;
+            vertical-align: middle;
+            @media #{$min-small} {
+                min-width: $mobile-nav-item_w;
+            }
+            &:hover span.link-fx2 {
+                 color: $base-text-color;
+            }
+            span.link-fx2 {
+                color: $base-text-color;
+                &:after {
+                    background-color: $base-color;
+                }
+                &:before {
+                    color: $base-text-color;
+                }
+            }
+        }
+    }
+    // Contact nav item mobile
+    .nav-item--contact {
+        position: relative;
+        #contact-link {
+            position: relative;
+            z-index: 1;
+            background-color: $body-background;
+        }
+        &__menu {
+            position: absolute;
+            @media #{$min-small} {
+                left: #{$mobile-nav-item_w/ 2 - $mobile-nav-contact-menu-link_w/2};
+            }
+            @include base-transition();
+            li {
+                 position: absolute;
+            }
+            a {
+                display: block;
+                color: $base-text-color;
+                @include rem('font-size', $mobile-nav-contact-menu-link_size);
+                padding: 10px $mobile-nav-contact-menu-link_padding;
+                color: $mobile-nav-contact-menu-link_w;
+            }
+            [class^="icon"] {
+                    display: inline-block;
+                    background-color: $body-background;
+                    border-radius: 50%;
+                    height: $mobile-nav-contact-menu-link_size*2;
+                    width: $mobile-nav-contact-menu-link_size*2;
+                    line-height: $mobile-nav-contact-menu-link_size*2;
+                    text-align: center;
+                    box-shadow: 0px 0px 10px 0px rgba(148,148,148,0.15);
+            }
+            .icon-mail {
+                font-size: 0.9em;
+                line-height: 2.5em;
+            }
+            .icon-contact-cv {
+                font-size: 0.8em;
+            }
+        }
+    }
+}

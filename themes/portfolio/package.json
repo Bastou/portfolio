@@ -1,0 +1,30 @@
+{
+  "name": "skltn",
+  "version": "1.0.0",
+  "description": "skltn",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Bastien",
+  "license": "ISC",
+  "engines": {
+    "node": ">=4"
+  },
+  "devDependencies": {
+    "barba.js": "^1.0.0",
+    "browser-sync": "^2.2.1",
+    "gulp": "^3.9.0",
+    "gulp-autoprefixer": "^3.1.1",
+    "gulp-cache": "^0.4.2",
+    "gulp-concat": "^2.6.1",
+    "gulp-imagemin": "^3.0.1",
+    "gulp-jslint": "^1.0.10",
+    "gulp-load-plugins": "latest",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^3.0.2",
+    "gulp-sourcemaps": "^1.9.1",
+    "gulp-uglify": "^3.0.0",
+    "gulp-util": "^3.0.7",
+    "gulp-watch": "^4.3.11"
+  }
+}

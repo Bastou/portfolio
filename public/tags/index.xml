@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tags on Bastien</title>
+    <link>/tags/</link>
+    <description>Recent content in Tags on Bastien</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>fr</language>
+    <lastBuildDate>Thu, 15 Dec 2016 17:05:59 +0200</lastBuildDate>
+    
+	<atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Acf</title>
+      <link>/tags/acf/</link>
+      <pubDate>Thu, 15 Dec 2016 17:05:59 +0200</pubDate>
+      
+      <guid>/tags/acf/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Apache Cordova</title>
+      <link>/tags/apache-cordova/</link>
+      <pubDate>Sun, 15 Jan 2017 17:05:59 +0200</pubDate>
+      
+      <guid>/tags/apache-cordova/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Bootstrap 4</title>
+      <link>/tags/bootstrap-4/</link>
+      <pubDate>Thu, 15 Dec 2016 17:05:59 +0200</pubDate>
+      
+      <guid>/tags/bootstrap-4/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Css Modulaire Sass</title>
+      <link>/tags/css-modulaire-sass/</link>
+      <pubDate>Sat, 15 Oct 2016 17:05:59 +0200</pubDate>
+      
+      <guid>/tags/css-modulaire-sass/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Full Responsive</title>
+      <link>/tags/full-responsive/</link>
+      <pubDate>Sat, 15 Oct 2016 17:05:59 +0200</pubDate>
+      
+      <guid>/tags/full-responsive/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Google Map Api</title>
+      <link>/tags/google-map-api/</link>
+      <pubDate>Sat, 15 Oct 2016 17:05:59 +0200</pubDate>
+      
+      <guid>/tags/google-map-api/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Gulp</title>
+      <link>/tags/gulp/</link>
+      <pubDate>Sat, 15 Oct 2016 17:05:59 +0200</pubDate>
+      
+      <guid>/tags/gulp/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Html5</title>
+      <link>/tags/html5/</link>
+      <pubDate>Sun, 15 Jan 2017 17:05:59 +0200</pubDate>
+      
+      <guid>/tags/html5/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Html5 Video</title>
+      <link>/tags/html5-video/</link>
+      <pubDate>Wed, 15 Jun 2016 17:05:59 +0200</pubDate>
+      
+      <guid>/tags/html5-video/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Jquery</title>
+      <link>/tags/jquery/</link>
+      <pubDate>Thu, 15 Dec 2016 17:05:59 +0200</pubDate>
+      
+      <guid>/tags/jquery/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Node Js</title>
+      <link>/tags/node-js/</link>
+      <pubDate>Tue, 15 Nov 2016 17:05:59 +0200</pubDate>
+      
+      <guid>/tags/node-js/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Php</title>
+      <link>/tags/php/</link>
+      <pubDate>Tue, 15 Nov 2016 17:05:59 +0200</pubDate>
+      
+      <guid>/tags/php/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Sass</title>
+      <link>/tags/sass/</link>
+      <pubDate>Sun, 15 Jan 2017 17:05:59 +0200</pubDate>
+      
+      <guid>/tags/sass/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Template 7</title>
+      <link>/tags/template-7/</link>
+      <pubDate>Sun, 15 Jan 2017 17:05:59 +0200</pubDate>
+      
+      <guid>/tags/template-7/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Twig</title>
+      <link>/tags/twig/</link>
+      <pubDate>Thu, 15 Dec 2016 17:05:59 +0200</pubDate>
+      
+      <guid>/tags/twig/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Wordpress</title>
+      <link>/tags/wordpress/</link>
+      <pubDate>Wed, 15 Jun 2016 17:05:59 +0200</pubDate>
+      
+      <guid>/tags/wordpress/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Yeoman</title>
+      <link>/tags/yeoman/</link>
+      <pubDate>Tue, 15 Nov 2016 17:05:59 +0200</pubDate>
+      
+      <guid>/tags/yeoman/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

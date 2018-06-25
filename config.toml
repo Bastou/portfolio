@@ -1,0 +1,60 @@
+DefaultContentLanguage = "fr"
+baseURL = "/" 
+# Dist :
+## baseURL = "https://bastiencornier.com/"
+title = "Bastien"
+theme = "portfolio"
+description = "Portfolio de Bastien Cornier, Creative & Front-end Developer Freelance basé en France. En recherche de projets passionnants."
+Paginate = 4
+canonifyurls = true
+
+[[menu.main]]
+    name = "Realisations"
+    weight = 1
+    identifier ="realisations"
+    url = "realisations/"
+[[menu.main]]
+    name = "Lab"
+    weight = 2
+    url = "lab/"
+
+
+[Languages]
+[Languages.fr]
+weight = 1
+languageCode = "fr"
+languageName = "French"
+description = "Portfolio de Bastien Cornier, Interactive & Front-end Developer Freelance basé en France. En recherche de projets passionnants."
+[Languages.fr.params]
+locale = "fr"
+RSSLink = "/index.xml"
+author = "newpixcom" # add your company name
+github = "" # add your github profile name
+twitter = "" # add your twitter profile
+email = "myemail@myaddress.xxx"
+
+
+[Languages.en]
+weight = 2
+languageCode = "en"
+languageName = "English"
+description = "Portfolio of Bastien Cornier, Interactive & Front-end Developer Freelance based in France. Searching for cool projects to do."
+[Languages.en.params]
+locale = "en"
+languageName = "English"
+author = "newpixcom" # add your company name
+github = "" # add your github profile name
+twitter = "" # add your twitter profile
+email = "myemail@myaddress.xxx"
+link-realisation-title = "work"
+link-lab-title = "lab"
+
+[[Languages.en.menu.main]]
+    name = "Work"
+    weight = 1
+    identifier ="realisations"
+    url = "realisations/"
+[[Languages.en.menu.main]]
+    name = "Lab"
+    weight = 2
+    url = "lab/"
