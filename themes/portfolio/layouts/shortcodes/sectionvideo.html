@@ -1,7 +1,7 @@
 <section class="section section-text container {{ with .Get "class" }}{{.}}{{ end }}">
 	<div class="row">
 		<div class="{{ with .Get "colclass" }}{{.}}{{else}}col-sm-6 offset-sm-3{{end}}">
-			<video {{ with .Get "id" }}id="{{.}}"{{ end }} class="video-box img-fluid mbs" width="{{ with .Get "width" }}{{.}}{{else}}556{{end}}" height="462" loop="" muted="muted" style="display: block;" poster="{{ .Get "poster" }}">
+			<video {{ with .Get "id" }}id="{{.}}"{{ end }} class="video-box img-fluid mbs" width="{{ with .Get "width" }}{{.}}{{else}}556{{end}}" height="462" loop=""  style="display: block;" poster="{{ .Get "poster" }}" autoplay="" loop="" muted="muted" playsinline="">
 			    <source id="webmsource" src="{{ .Get "webmsource" }}">
 			    <source id="mp4source" src="{{ .Get "mp4source" }}">
 			    Sorry, you don't have HTML5 video and we didn't catch this properly in javascript. You can try to view the gif directly: <a href="{{ .Get "gif" }}">{{ .Get "gif" }}</a>.

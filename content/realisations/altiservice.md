@@ -5,7 +5,7 @@ tags = ["CSS modulaire (sass)", "Full responsive", "Gulp", "Google map API"]
 categories = ["general"]
 draft = false
 description = "Altiservice, filiale du groupe Engie, gère 4 grandes stations dans les Pyrénées : Saint-Lary, Font-Romeu Pyrénées 2000, Guzet et Artouste. <br/> Pour la refonte du site internet, j’ai été chargé du développement front-end du site web au sein de l’agence Orealys."
-weight = 1
+weight = 100
 
 bref = ""
 couleur = ""

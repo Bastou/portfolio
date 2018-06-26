@@ -4,16 +4,12 @@
 {{ define "main" }}
 
 <div class="content content--listing">
-	{{if eq .Type  "realisations"}}
-	<div class="container-window-spacing smFadeIn">
-		<p class="listing-info p-bigger medium">{{ i18n "creditsagence" }}</p>
-	</div><!-- /.container-window-spacing -->
-
-	{{end}}
 
 	<ul class="listing">
 
-	 {{ range .Data.Pages }} {{ partial "page-summary" . }} {{ end }}
+        {{ range .Data.Pages.ByWeight }}
+            {{ partial "page-summary" . }}
+        {{ end }}
 	  <!-- <section>{{ partial "pagination" .}}</section> -->
 	</ul>
 </div><!-- /.content -->

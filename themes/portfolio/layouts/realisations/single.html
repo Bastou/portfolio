@@ -23,14 +23,14 @@
 						{{ end }}
 						<div class="btn-group mt-auto smFadeInTop">
 							{{ if  .Params.projet_url }}
-							<a href="{{ .Params.projet_url }}" class="btn link link-fx-wrapper " >
+							<a href="{{ .Params.projet_url }}" class="btn link link-fx-wrapper " target="_blank">
 								<span class="link-fx--feedback"></span>
 								<span class="btn__inner" data-letters="{{ with .Params.projet_url_titre }}{{.}}{{else}}En savoir plus{{end}}">{{ with .Params.projet_url_titre }}{{.}}{{else}}En savoir plus{{end}}</span>
 							</a>
 							{{ end }}
 
 							{{ if  .Params.projet_url2 }}
-							<a href="{{ .Params.projet_url2 }}" class="btn link link-fx-wrapper " >
+							<a href="{{ .Params.projet_url2 }}" class="btn link link-fx-wrapper " target="_blank">
 								<span class="link-fx--feedback"></span>
 								<span class="btn__inner" data-letters="{{ with .Params.projet_url2_titre }}{{.}}{{else}}En savoir plus{{end}}">{{ with .Params.projet_url2_titre }}{{.}}{{else}}En savoir plus{{end}}</span>
 							</a>
@@ -40,25 +40,29 @@
 					<div class="col-sm-3  rea-side-infos smFadeInTop">
 						<dl class="description-list">
 							{{ if .Params.projet_type }}
-							<dt>{{ i18n "project" }}</dt>
-							<dd>{{ .Params.projet_type }}</dd>
-							{{ end }}
-							<dt>Date</dt>
-							<dd>{{ partial "time_month-year.html" . }}</dd>
-							{{ with .Params.role }}
-							<dt>{{ i18n "role" }}</dt>
-							<dd>{{ . }}</dd>
-							{{end}}
-							{{if and .Params.credit_client .Params.credit_agence  }}
-							<dt>{{ i18n "credits" }}</dt>
-							<dd>
-								<dl class="inline">
-									<dt>Client </dt>
-									<dd>{{ .Params.credit_client }}</dd>
-									<dt>{{ i18n "agence" }} </dt>
-									<dd>{{ .Params.credit_agence }}</dd>
-								</dl>
-							</dd>
+                                <dt>{{ i18n "project" }}</dt>
+                                <dd>{{ .Params.projet_type }}</dd>
+                                {{ end }}
+                                <dt>Date</dt>
+                                <dd>{{ partial "time_month-year.html" . }}</dd>
+                                {{ with .Params.role }}
+                                <dt>{{ i18n "role" }}</dt>
+                                <dd>{{ . }}</dd>
+                                {{end}}
+                                {{if and .Params.credit_client .Params.credit_agence  }}
+                                <dt>{{ i18n "credits" }}</dt>
+                                <dd>
+                                    <dl class="inline">
+                                        <dt>Client </dt>
+                                        <dd>{{ .Params.credit_client }}</dd>
+                                        <dt>{{ i18n "agence" }} </dt>
+                                        <dd>{{ .Params.credit_agence }}</dd>
+                                    </dl>
+                                </dd>
+                                {{ if .Params.awards }}
+                                    <dt>{{ i18n "recompenses" }}</dt>
+                                    <dd>{{ .Params.awards}}</dd>
+                                {{ end }}
 							{{ end }}
 						</dl>
 					</div><!-- /.col-3 -->

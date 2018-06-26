@@ -6,7 +6,7 @@
  var P_HEIGHT = 172;
  var BG_COLOR = "#0E112B";
  var PERSO_COLOR = "#f5f7f9";
- var APPROACH = 250;
+ var APPROACH = 300;
  var FORCE = 50;
 
  // Constructeur scene
@@ -16,6 +16,7 @@
      this.interacted = false;
      this.pageLoadTime = pageLoadTime();
      this.ratio = window.devicePixelRatio || 1;
+     this.body = null;
  }
 
  Scene.prototype.resize = function() {
@@ -51,6 +52,12 @@
 
      // Création et initialisation du canvas
      this.createOffScreenCanvas();
+
+     // Get body
+     this.body = document.getElementsByTagName('body')[0];
+
+
+     //this.body.style.cursor = 'grab';
 
      // Récupération du conteneur principal
      $mainCont = document.getElementById('canvas-loader-container');
@@ -364,12 +371,21 @@
 
          }
 
+         // Set curso to grab
+         //this.body.style.cursor = 'grab';
+         //console.log(this.body);
+
+
+         scene.body.setAttribute("style", "cursor: -webkit-grab; cursor: grab;");
+
      } else {
 
          this.corps.rotate *= .5;
          this.oreille.dirx *= .1;
          this.oreille.diry *= .1;
          this.pieds.mvt *= .1;
+
+         scene.body.setAttribute("style", "");
      }
 
 

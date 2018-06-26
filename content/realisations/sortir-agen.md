@@ -5,7 +5,7 @@ tags = ["HTML5", "Apache Cordova", "Template 7", "Google map API", "SASS"]
 categories = ["general"]
 draft = false
 description = "L’application Sortir #Agen est le compagnon idéal pour découvrir la ville et sortir des sentiers battus. J’ai été chargé de développer le front-office de l’application sur Android et Ios au sein de l’agence Orealys."
-weight = 2
+weight = 101
 
 bref = ""
 couleur = ""
