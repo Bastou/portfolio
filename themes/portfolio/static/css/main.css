@@ -6378,6 +6378,7 @@ address {
 ----------------------------------------------------------------------------------------*/
 .texte-chapeau {
   line-height: 1.5;
+  margin-bottom: 1.2em;
 }
 
 .texte-en-avant {
@@ -6887,6 +6888,10 @@ ol.liste-number > li:before {
   color: #373737;
 }
 
+.description-list {
+  line-height: 1.5;
+}
+
 .description-list > dt + dd {
   padding-bottom: 10px;
   margin-bottom: 10px;
@@ -6922,6 +6927,13 @@ dl.inline dd:after {
 dl.inline dt {
   display: inline-block;
   min-width: 65px;
+}
+
+.description-list--exerg {
+  text-transform: uppercase;
+  line-height: 1.6;
+  font-weight: 700;
+  color: #999;
 }
 
 /* SECTIONS
@@ -7597,6 +7609,7 @@ main {
 
 .container img, .container-xl img, .container-11 img, .container-8 img {
   max-width: 100%;
+  width: 100%;
   height: auto;
 }
 

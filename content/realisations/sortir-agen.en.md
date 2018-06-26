@@ -5,7 +5,7 @@ tags = ["HTML5", "Apache Cordova", "Template 7", "Google map API", "SASS"]
 categories = ["general"]
 draft = false
 description = "The Sortir #Agen app is ideal to discover the city of Agen and get off the beaten track. My task within Orealys agency was to develop the front-end part of the app on Android and Ios."
-weight = 2
+weight = 101
 
 bref = ""
 couleur = ""

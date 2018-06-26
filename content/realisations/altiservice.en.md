@@ -5,7 +5,7 @@ tags = ["Modular CSS (sass)", "Full responsive", "Gulp", "Google map API"]
 categories = ["general"]
 draft = false
 description = "Altiservice, an Engie group subsidiary, manages four large ski stations <br /> in the Pyrénées mountains : Saint-Lary, Font-Romeu Pyrénées 2000, Guzet, and Artouste. <br/> My task within Orealys agency was to develop the front-end part in order to redesign the website."
-weight = 1
+weight = 100
 
 bref = ""
 couleur = ""
@@ -13,7 +13,7 @@ couv_video = ""
 image = "altiservice-couv.jpg"
 thumbnail = "altiservice-couv.jpg"
 projet_url = "http://www.altiservice.com"
-projet_url_titre = "See the website"
+projet_url_titre = "Launch"
 projet_url2 = ""
 projet_url2_titre = ""
 show_for_paris = ""

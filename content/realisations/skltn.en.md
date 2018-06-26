@@ -18,7 +18,7 @@ show_for_paris = true
 tags = ["Node JS","Yeoman","Gulp","PHP","SASS", "Bootstrap 4"]
 
 title = "SKLTN"
-weight = 5
+weight = 200
 
 +++
 

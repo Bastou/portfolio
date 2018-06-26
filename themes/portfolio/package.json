@@ -1,7 +1,7 @@
 {
-  "name": "skltn",
+  "name": "portfolio-bc",
   "version": "1.0.0",
-  "description": "skltn",
+  "description": "portfolio bastien cornier",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
