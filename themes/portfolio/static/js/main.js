@@ -67,14 +67,6 @@
     }
     project.regionCheck();
 
-    // project.setLang() = function () {
-    //     if (navigator.language.includes('fr')) {
-    //         localeLang = 'fr';
-    //     } else {
-    //         localeLang = 'en';
-    //     }
-    // }
-
     project.clickFeedbackFx = function() {
 
         // On nav item click
