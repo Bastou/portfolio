@@ -323,6 +323,10 @@ hr {
 
 .link-externe{
 	border-bottom: dotted 1px $dominant-color;
+	&:hover, &:active {
+		color: #2a3389;
+		border-bottom: dotted 1px #2a3389;
+	}
 }
 
 /* font family */
@@ -578,7 +582,9 @@ ol.liste-number {
 // Liste description
 
 .description-list {
-	line-height: 	1.5;
+	> dt, > dd {
+		line-height: 	1.5;
+	}
 	> dt {
 		@extend .font-stack-headings;
 	}
@@ -621,10 +627,16 @@ dl.inline dt{
 
 // Custom desc
 .description-list--exerg {
-	text-transform: uppercase;
-	line-height: 1.6;
-	font-weight: 700;
-	color: #999;
+	&, > a {
+		text-transform: uppercase;
+		line-height: 1.6;
+		font-weight: 700;
+		color: #999;
+	}
+	a:hover {
+		color: darken(#999, 20deg);
+	}
+
 }
 
 /* SECTIONS

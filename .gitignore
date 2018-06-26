@@ -9,7 +9,7 @@ skltn-logo.txt
 dist/
 **/hugo-cactus-theme/
 **/hugo_theme_robust/
-public/
+**/public/
 **/.idea/
-
+bin/
 skltn-p2/

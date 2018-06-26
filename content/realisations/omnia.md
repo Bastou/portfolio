@@ -24,7 +24,9 @@ credit_agence = ""
 class = "header-theme-negatif"
 +++
  
- {{< sectionvideo poster="https://thumbs.gfycat.com/SpotlessScarceAzurevase-poster.jpg" webmsource="https://giant.gfycat.com/SpotlessScarceAzurevase.webm" mp4source="https://giant.gfycat.com/SpotlessScarceAzurevase.mp4" gif="https://zippy.gfycat.com/SpotlessScarceAzurevase.gif" >}}
+ {{< sectionvideo poster="https://thumbs.gfycat.com/SpotlessScarceAzurevase-poster.jpg" 
+ webmsource="https://giant.gfycat.com/SpotlessScarceAzurevase.webm" mp4source="https://giant.gfycat.com/SpotlessScarceAzurevase.mp4" gif="https://zippy.gfycat.com/SpotlessScarceAzurevase.gif" >}}
+
 {{< sectionimg src="/img/omnia/omnia-1.jpg" >}}
 {{< sectionimg src="/img/omnia/omnia-2.jpg" >}}
 {{< sectionimg src="/img/omnia/omnia-3.jpg" >}}

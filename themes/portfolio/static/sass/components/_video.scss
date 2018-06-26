@@ -1,0 +1,15 @@
+/* $VIDEO
+   ========================================================================== */
+
+.video-wrapper {
+    &.ratiotv {
+        position: relative; 
+        height: 0; 
+        overflow: hidden;
+        padding-bottom: 50.6%;
+        margin-bottom: 20px;
+        > video {
+            @include centerer();
+        }
+    }
+}   
