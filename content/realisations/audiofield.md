@@ -24,6 +24,8 @@ credit_agence = ""
 class = "header-theme-negatif"
 +++
  
+{{< sectionvideo ratiotv="ratiotv" colclass="col-12" width="1200" poster="https://thumbs.gfycat.com/BlaringSpottedAlligatorgar.jpg" 
+webmsource="https://giant.gfycat.com/BlaringSpottedAlligatorgar.webm" mp4source="https://giant.gfycat.com/BlaringSpottedAlligatorgar.mp4" 
+gif="https://thumbs.gfycat.com/BlaringSpottedAlligatorgar-small.gif" >}} 
 {{< sectionimg src="/img/audiofield/audiofield-prez-1.jpg" >}}
 {{< sectionimg src="/img/audiofield/audiofield-prez-2.jpg" >}}
-{{< sectionimg src="/img/audiofield/audiofield-prez-3.jpg" >}}

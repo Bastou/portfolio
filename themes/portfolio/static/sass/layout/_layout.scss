@@ -97,8 +97,8 @@ main {
 		padding-bottom: 80px;
 	}
 
-}
-.content {
+} 
+.content { 
 	//padding-bottom: $large-value;
 
 	&--listing {
@@ -124,6 +124,7 @@ main {
 .container {
 	img {
 		max-width: 100%;
+		width: 	100%;
 		height: auto;
 	}
 }
@@ -169,6 +170,7 @@ main {
 .post {
 	&__header {
 		padding-top: 0.1px;
+		margin-bottom: 60px;
 	}
 	&-content {
 		position: relative;

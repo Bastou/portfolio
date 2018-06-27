@@ -1,7 +1,7 @@
 DefaultContentLanguage = "fr"
 baseURL = "/" 
 # Dist :
-## baseURL = "https://bastiencornier.com/"
+#baseURL = "https://bastiencornier.com/"
 title = "Bastien"
 theme = "portfolio"
 description = "Portfolio de Bastien Cornier, Creative & Front-end Developer Freelance basé en France. En recherche de projets passionnants."

@@ -442,7 +442,6 @@
      /* Check if we interacted with sleeper
       -------------- */
      if(!this.interacted && (this.x !== this.oX || this.x !== this.oX)) {
-         console.log('interact with sleeper');
          this.interacted = true;
      }
 

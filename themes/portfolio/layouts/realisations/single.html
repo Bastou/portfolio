@@ -60,8 +60,8 @@
                                     </dl>
                                 </dd>
                                 {{ if .Params.awards }}
-                                    <dt>{{ i18n "recompenses" }}</dt>
-                                    <dd>{{ .Params.awards}}</dd>
+                                    <dt>{{ i18n "recompenses" }}</dt> 
+                                    <dd class="description-list--exerg">{{ .Params.awards | safeHTML }}</dd>
                                 {{ end }}
 							{{ end }}
 						</dl>
