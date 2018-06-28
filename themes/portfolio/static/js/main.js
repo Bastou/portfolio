@@ -749,6 +749,13 @@
         labItem.on('click', function() {
             var labItemImage = u(this).find('.listing__item__embed__thumb');
             var labItemIframe = u(this).find('iframe');
+            var labItemWebFrame = u(this).find('.iframe-webpage');
+
+            if(labItemWebFrame.length > 0) {
+                var iframeLink = labItemIframe.attr('data-src');
+                labItemIframe.attr('src', iframeLink);
+            }
+
             //console.log(labItemIframe);
             labItemImage.addClass('fadeOut');
             labItemIframe.nodes[0].click();

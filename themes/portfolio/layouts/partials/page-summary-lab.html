@@ -4,14 +4,20 @@
 	</h2>
 	<div class="listing__item__embed mbm">
 
-		<!-- CODEPEN -->
-		<p data-height="500" data-theme-id="27935" data-slug-hash="{{ .Params.slug_hash }}" data-default-tab="result" data-user="erevan" data-embed-version="2" data-pen-title="{{ .Title }}" data-preview="true" class="codepen">See the Pen <a href="{{ .Params.external_link }}">{{ .Title }}</a> by bastou (<a href="https://codepen.io/erevan">@erevan</a>) on <a href="https://codepen.io">CodePen</a>.</p>
-		<script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
-		<div class="listing__item__embed__thumb cover absolute-fit bg-img" style="background-image:url('{{ .Site.BaseURL }}img/lab/{{.Params.image}}'"></div><!-- /.listing__item__embed__thumb -->
+
 		
 		<!--  IFRAME  -->
+        {{ if eq .Params.type "iframe" }}
 		<div  class="iframe-container">
-			<iframe class="iframe" src="https://bastiencornier.com/data-sunrise/" gesture="media"  allow="encrypted-media" allowfullscreen></iframe>
+			<iframe class="iframe iframe-webpage" height="500" class="iframe" data-src="https://bastiencornier.com/data-sunrise/" src="" allow="autoplay"  allow="encrypted-media" allowfullscreen></iframe>
 		</div>
+        {{ else }}
+        <!-- CODEPEN -->
+        <p data-height="500" data-theme-id="27935" data-slug-hash="{{ .Params.slug_hash }}" data-default-tab="result" data-user="erevan" data-embed-version="2" data-pen-title="{{ .Title }}" data-preview="true" class="codepen">See the Pen <a href="{{ .Params.external_link }}">{{ .Title }}</a> by bastou (<a href="https://codepen.io/erevan">@erevan</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+        <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+        {{ end }}
+
+        <div class="listing__item__embed__thumb cover absolute-fit bg-img" style="background-image:url('{{ .Site.BaseURL }}img/lab/{{.Params.image}}'"></div><!-- /.listing__item__embed__thumb -->
+
 	</div><!-- /.listing__item__embed -->
 </li>
