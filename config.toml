@@ -5,7 +5,7 @@ baseURL = "https://bastiencornier.com/"
 title = "Bastien"
 theme = "portfolio"
 description = "Portfolio de Bastien Cornier, Creative & Front-end Developer Freelance basé en France. En recherche de projets passionnants."
-Paginate = 4
+Paginate = 1000
 canonifyurls = true
 
 [[menu.main]]

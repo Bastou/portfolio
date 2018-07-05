@@ -24,7 +24,7 @@
 
     .intro {
         width: 100%;
-        max-width: #{780px + ($border-window-spacing - $homeBorder-size - $bootstrap-padding)*2};
+        max-width: #{900px + ($border-window-spacing - $homeBorder-size - $bootstrap-padding)*2};
         padding: 0 #{$border-window-spacing - $homeBorder-size - $bootstrap-padding};
         @extend .absolute-center;
         &__nav-social {
