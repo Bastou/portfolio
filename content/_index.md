@@ -1,5 +1,5 @@
 +++
-description = "Portfolio de Bastien Cornier, Creative & Front-end Developer Freelance basé en France. En recherche de projets passionnants."
+description = "Bastien Cornier, Creative & Front-end Developer Freelance based in France. Offers original and innovative experiences for web agencies, startups and companies."
 date = "2017-01-01"
 title = "Bastien Cornier"
 draft = false

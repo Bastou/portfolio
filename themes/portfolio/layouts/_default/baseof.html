@@ -12,7 +12,14 @@
     <meta name="description" content="{{ . }}"> {{ end }}
     <!-- noindex meta -->
     {{ $default_noindex_kinds := slice "section" "taxonomy" "taxonomyTerm" }} {{ $noindex_kinds := .Site.Params.noindex_kinds | default $default_noindex_kinds }} {{ $is_noindex_true := and (isset .Params "noindex") .Params.noindex }} {{ if or (in $noindex_kinds .Kind) ($is_noindex_true) }}
-    <meta name="robots" content="noindex"> {{ end }} {{ partial "meta/name-author" . }} {{ template "_internal/opengraph.html" . }} {{ partial "meta/ogimage" . }}
+    <meta name="robots" content="noindex"> {{ end }} 
+    {{ partial "meta/name-author" . }} 
+    <meta property="og:image:height" content="499">
+    <meta property="og:image:width" content="953">
+    <meta property="og:title" content="{{ .Site.Title }}">
+    {{ with .Description }}<meta property="og:description" content="{{ . }}"> {{ end }}
+    <meta property="og:url" content="https://bastiencornier.com/">
+    <meta property="og:image" content="https://bastiencornier.com/img/og-image.jpg">
     <!-- Site verification -->
     {{ if .IsHome }} {{ partial "site-verification" . }} {{ end }} {{ if .RSSLink }}
     <link href="{{ .RSSLink }}" rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" /> {{ end }}
