@@ -27,11 +27,20 @@
         project.imgRetina();
         project.pageTransitions();
         project.videoPlayOnScroll();
-        project.testReady();
-        project.menuContact();
-        project.loadLabItem();
-        project.onResizeFuncs();
 
+        // Mobile
+        project.menuContact();
+
+        // Page Lab
+        project.loadLabItem();
+        
+        // Page Home
+        project.homeScrollToPage();
+
+        // Resize 
+        project.onResize(); 
+
+        //
         // ON load
         //u(window).on('load', function() {});
 
@@ -458,6 +467,14 @@
 
         };
 
+        var setActiveContainerClasses = function(container) {
+            container && container.classList.add('show-page') 
+        }
+
+        var removeOldContainerClasses = function(container) {
+            container && container.classList.remove('show-page') 
+        }
+
         // Functions we have to trigger after transition on each page
         var BarbaView = Barba.BaseView.extend({
             namespace: 'default',
@@ -469,7 +486,17 @@
                 // The Transition has just finished.
                 project.menuContact();
                 project.loadLabItem();
-            }
+                
+                setActiveContainerClasses(this.container);
+                this.oldContainer = this.container;
+                //console.log(' onEnterCompleted', this.container.classList);
+            },
+            onLeave: function() {
+                // A new Transition toward a new page has just started.
+                //this.container.classList.remove('show-page')
+                removeOldContainerClasses(this.oldContainer)
+                //console.log(' onLeave', this.oldContainer.classList);
+            },
         });
         BarbaView.init();
 
@@ -484,14 +511,37 @@
             onEnterCompleted: function() {
                 // The Transition has just finished.
                 project.menuContact();
+                setActiveContainerClasses(this.container)
+                this.oldContainer = this.container
             },
             onLeave: function() {
                 // A new Transition toward a new page has just started.
+                //this.container.classList.remove('show-page')
+                removeOldContainerClasses(this.oldContainer)
             },
             onLeaveCompleted: function() {
                 // The Container has just been removed from the DOM.
             }
         });
+
+        // Homepage specific
+        var BarbaPostView = Barba.BaseView.extend({
+            namespace: 'homepage',
+            onEnter: function() {
+                // The new Container is ready and attached to the DOM.
+                project.homeScrollToPage();
+            },
+            onEnterCompleted: function() {
+                // The Transition has just finished.
+                setActiveContainerClasses(this.container)
+                this.oldContainer = this.container
+            },
+            onLeave: function() {
+                // A new Transition toward a new page has just started.
+                //this.container.classList.remove('show-page')
+                removeOldContainerClasses(this.oldContainer)
+            }
+        });        
         BarbaPostView.init();
 
         /* Generic transitions
@@ -577,9 +627,9 @@
         var fadeInTop = u('.smFadeInTop');
         var mainWrapper = u('.main-wrapper');
 
-        project.onResizeFuncs();
+        project.onResize();
 
-        mainWrapper.addClass('show-home new-container');
+        mainWrapper.addClass('show-home new-container show-page'); 
         u('#canvas-loader-wrapper').empty();
 
         var showHome = anime.timeline();
@@ -590,7 +640,7 @@
                 easing: 'easeOutExpo',
                 opacity: {
                     value: [0, 1],
-                    duration: 50
+                    duration: 50 
                 },
                 borderWidth: {
                     value: ["0px", "15px"],
@@ -788,7 +838,38 @@
         return retina();
     }
 
-    project.onResizeFuncs = function() {
+    project.homeScrollToPage = function() { 
+        var pageContainer = u('body').find('.home'); 
+        if(!pageContainer.length === 0) return; 
+        var bottomLink = pageContainer.find('.bottom-link').nodes[0];
+        var bottomLinkedTriggered = false;
+        var wheelCount = 0;
+        var wheelDelay = 300;
+        function resetWheel() {
+            wheelCount= 0;
+        }
+        function handleWheel(delta) {
+
+            pageContainer = u('body').find('.home'); 
+            bottomLink = pageContainer.find('.bottom-link').nodes[0];
+            if(!pageContainer.hasClass('show-page')) return;
+            wheelCount++;
+            if(wheelCount > 1 && !bottomLinkedTriggered) {
+                bottomLink.click()
+                bottomLinkedTriggered = true;
+                resetWheel(); 
+                // wait for end animation
+                setTimeout(function() {
+                    bottomLinkedTriggered = false
+                }, 1000)
+            }
+
+            setTimeout(resetWheel, wheelDelay)
+        }
+        addTouchWheelEventListener(handleWheel) 
+    }
+
+    project.onResize = function() {
         var resizeTimer;
 
         function resize() {
@@ -804,18 +885,6 @@
         window.addEventListener('resize', resizeWithContext);
 
     }
-
-
-    // TODO : Remove Test 
-    project.testReady = function() {
-        //console.log('ready');
-    };
-
-    project.testInit = function() {
-        //console.log('init');
-    };
-    project.testInit();
-
 
     // Run init on dom ready
     ready(project.ready);

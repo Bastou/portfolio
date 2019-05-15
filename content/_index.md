@@ -5,11 +5,5 @@ title = "Bastien Cornier"
 draft = false
 +++
 
-{{< php_code >}}
-    <?php
-    echo 'php working'; 
-    ?>
-{{< /php_code >}}
-
 <p><span class="intro__pre smFadeInTop">Salut !</span><br />
   <span class="smFadeInTop">Je m'appelle <span itemprop="name">Bastien Cornier.</span> Je suis <span itemprop="jobTitle">développeur front-end &amp; créatif</span> basé sur Paris.<span class="hidden-md-down"><br /></span></span> <br />  <span class="smFadeInTop">Tu peux consulter quelques unes de mes {{< linkfx href="realisations" title="realisations" data-transition="bubble" >}} et {{< linkfx href="lab" title="experimentations" data-transition="bubble" >}}.</span> <br />  <span class="smFadeInTop">N'hésite pas à me {{< linkfx href="mailto:bastien.cornier@gmail.com?subject=Apero?" title="contacter" external="true" itemprop="email" >}}.</span></p>

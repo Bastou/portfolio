@@ -751,8 +751,7 @@ mark,
   padding: 0.25rem;
   background-color: #FFFFFF;
   border: 1px solid #ddd;
-  -webkit-border-radius: 0.25rem;
-          border-radius: 0.25rem;
+  border-radius: 0.25rem;
   -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
   max-width: 100%;
@@ -785,8 +784,7 @@ code {
   font-size: 90%;
   color: #bd4147;
   background-color: #f7f7f9;
-  -webkit-border-radius: 0.25rem;
-          border-radius: 0.25rem;
+  border-radius: 0.25rem;
 }
 
 a > code {
@@ -800,8 +798,7 @@ kbd {
   font-size: 90%;
   color: #FFFFFF;
   background-color: #292b2c;
-  -webkit-border-radius: 0.2rem;
-          border-radius: 0.2rem;
+  border-radius: 0.2rem;
 }
 
 kbd kbd {
@@ -823,8 +820,7 @@ pre code {
   font-size: inherit;
   color: inherit;
   background-color: transparent;
-  -webkit-border-radius: 0;
-          border-radius: 0;
+  border-radius: 0;
 }
 
 .pre-scrollable {
@@ -2184,10 +2180,8 @@ pre code {
 
 .nav-tabs .nav-link {
   border: 1px solid transparent;
-  -webkit-border-top-right-radius: 0.25rem;
-          border-top-right-radius: 0.25rem;
-  -webkit-border-top-left-radius: 0.25rem;
-          border-top-left-radius: 0.25rem;
+  border-top-right-radius: 0.25rem;
+  border-top-left-radius: 0.25rem;
 }
 
 .nav-tabs .nav-link:focus, .nav-tabs .nav-link:hover {
@@ -2209,15 +2203,12 @@ pre code {
 
 .nav-tabs .dropdown-menu {
   margin-top: -1px;
-  -webkit-border-top-right-radius: 0;
-          border-top-right-radius: 0;
-  -webkit-border-top-left-radius: 0;
-          border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  border-top-left-radius: 0;
 }
 
 .nav-pills .nav-link {
-  -webkit-border-radius: 0.25rem;
-          border-radius: 0.25rem;
+  border-radius: 0.25rem;
 }
 
 .nav-pills .nav-link.active,
@@ -2323,8 +2314,7 @@ pre code {
   line-height: 1;
   background: transparent;
   border: 1px solid transparent;
-  -webkit-border-radius: 0.25rem;
-          border-radius: 0.25rem;
+  border-radius: 0.25rem;
 }
 
 .navbar-toggler:focus, .navbar-toggler:hover {
@@ -2751,8 +2741,7 @@ pre code {
   padding: 0.75rem 1.25rem;
   margin-bottom: 1rem;
   border: 1px solid transparent;
-  -webkit-border-radius: 0.25rem;
-          border-radius: 0.25rem;
+  border-radius: 0.25rem;
 }
 
 .alert-heading {
@@ -2967,46 +2956,35 @@ a.bg-inverse:focus, a.bg-inverse:hover {
 }
 
 .rounded {
-  -webkit-border-radius: 0.25rem;
-          border-radius: 0.25rem;
+  border-radius: 0.25rem;
 }
 
 .rounded-top {
-  -webkit-border-top-right-radius: 0.25rem;
-          border-top-right-radius: 0.25rem;
-  -webkit-border-top-left-radius: 0.25rem;
-          border-top-left-radius: 0.25rem;
+  border-top-right-radius: 0.25rem;
+  border-top-left-radius: 0.25rem;
 }
 
 .rounded-right {
-  -webkit-border-bottom-right-radius: 0.25rem;
-          border-bottom-right-radius: 0.25rem;
-  -webkit-border-top-right-radius: 0.25rem;
-          border-top-right-radius: 0.25rem;
+  border-bottom-right-radius: 0.25rem;
+  border-top-right-radius: 0.25rem;
 }
 
 .rounded-bottom {
-  -webkit-border-bottom-right-radius: 0.25rem;
-          border-bottom-right-radius: 0.25rem;
-  -webkit-border-bottom-left-radius: 0.25rem;
-          border-bottom-left-radius: 0.25rem;
+  border-bottom-right-radius: 0.25rem;
+  border-bottom-left-radius: 0.25rem;
 }
 
 .rounded-left {
-  -webkit-border-bottom-left-radius: 0.25rem;
-          border-bottom-left-radius: 0.25rem;
-  -webkit-border-top-left-radius: 0.25rem;
-          border-top-left-radius: 0.25rem;
+  border-bottom-left-radius: 0.25rem;
+  border-top-left-radius: 0.25rem;
 }
 
 .rounded-circle {
-  -webkit-border-radius: 50%;
-          border-radius: 50%;
+  border-radius: 50%;
 }
 
 .rounded-0 {
-  -webkit-border-radius: 0;
-          border-radius: 0;
+  border-radius: 0;
 }
 
 .clearfix::after {
@@ -7285,8 +7263,7 @@ figure.highlight {
   margin: 14px 0;
   background-color: #f7f7f9;
   border: 1px solid #e1e1e8;
-  -webkit-border-radius: 4px;
-          border-radius: 4px;
+  border-radius: 4px;
 }
 
 .text-shine {
@@ -8254,8 +8231,7 @@ nav.social-networks a {
 }
 
 .header-main form.searchform .form-control {
-  -webkit-border-radius: 0;
-          border-radius: 0;
+  border-radius: 0;
 }
 
 /* NAVBAR
@@ -8587,8 +8563,7 @@ nav.social-networks a {
 .mobile-navbar .nav-item--contact__menu [class^="icon"] {
   display: inline-block;
   background-color: #f5f7f9;
-  -webkit-border-radius: 50%;
-          border-radius: 50%;
+  border-radius: 50%;
   height: 40px;
   width: 40px;
   line-height: 40px;
@@ -8678,16 +8653,14 @@ form.form .form-control {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   border: 1px solid #dadada;
-  -webkit-border-radius: 5px;
-          border-radius: 5px;
+  border-radius: 5px;
   background: #FFF;
   -webkit-box-shadow: none;
           box-shadow: none;
 }
 
 form.form .form-control--rounded {
-  -webkit-border-radius: 999px;
-          border-radius: 999px;
+  border-radius: 999px;
 }
 
 form.form .form-control:focus {
@@ -8902,8 +8875,7 @@ form.form button.reset {
 /* Pour jquery ui */
 .ui-datepicker {
   background: #f2f2f2;
-  -webkit-border-radius: 3px;
-          border-radius: 3px;
+  border-radius: 3px;
 }
 
 .ui-datepicker .ui-datepicker-next:before,
@@ -8958,8 +8930,7 @@ form.form button.reset {
   height: 25px;
   border: 1px solid #CECECE;
   background: white;
-  -webkit-border-radius: 3px;
-          border-radius: 3px;
+  border-radius: 3px;
 }
 
 .checkbox [type="checkbox"]:not(:checked) + label:after,
@@ -9041,8 +9012,7 @@ form.searchform button[type="submit"] {
 }
 
 .form--newsletter input.form-control {
-  -webkit-border-radius: 999px;
-          border-radius: 999px;
+  border-radius: 999px;
 }
 
 form .form--newsletter__submit {
@@ -9276,8 +9246,7 @@ footer {
   position: absolute;
   width: 10px;
   height: 10px;
-  -webkit-border-radius: 50%;
-          border-radius: 50%;
+  border-radius: 50%;
   background: rgba(0, 0, 0, 0.1);
   top: 50%;
   left: 50%;
@@ -9348,8 +9317,7 @@ footer {
   z-index: 100;
   width: 20px;
   height: 20px;
-  -webkit-border-radius: 50%;
-          border-radius: 50%;
+  border-radius: 50%;
   background: #0E112B;
   top: 0;
   left: 0;
@@ -10091,8 +10059,7 @@ footer {
   line-height: auto-3px;
   background-color: transparent;
   border: none;
-  -webkit-border-radius: 0;
-          border-radius: 0;
+  border-radius: 0;
   padding: 0 35px 0 0;
   -webkit-transition: all 0.3s cubic-bezier(0.77, 0, 0.175, 1);
   transition: all 0.3s cubic-bezier(0.77, 0, 0.175, 1);
@@ -10248,8 +10215,7 @@ footer {
 /* Horizontal Dropdown
 ----------------------------------------------------------------------------------------*/
 .dropdown-menu {
-  -webkit-border-radius: 0;
-          border-radius: 0;
+  border-radius: 0;
   border: none;
 }
 
@@ -10291,6 +10257,8 @@ footer {
 .home {
   overflow: hidden;
   border: 15px solid #0E112B;
+  -ms-touch-action: manipulation;
+      touch-action: manipulation;
 }
 
 .home.new-container {
@@ -10300,6 +10268,10 @@ footer {
 .home.show-home {
   opacity: 0;
   border-width: 0;
+}
+
+.home.show-page .bottom-link:after, .home.show-page .bottom-link:before {
+  height: 30px;
 }
 
 .home.init {
@@ -10332,6 +10304,53 @@ footer {
 
 .home .intro__nav-social a:hover, .home .intro__nav-social a:active, .home .intro__nav-social a:focus {
   color: #373737;
+}
+
+.home .bottom-link {
+  display: block;
+  position: absolute;
+  top: 50%;
+  top: inherit;
+  left: 50%;
+  -webkit-transform: translate(-50%, 0);
+      -ms-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
+  position: fixed;
+  z-index: 1;
+  bottom: 15px;
+  color: #ccc;
+  padding: 20px 30px;
+}
+
+.home .bottom-link:before, .home .bottom-link:after {
+  content: "";
+  position: absolute;
+  width: 1px;
+  height: 0;
+  background: #0E112B;
+  left: 0;
+  bottom: -12px;
+  right: 0;
+  margin: 0 auto;
+  -webkit-transition: height 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+  transition: height 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out, height 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out, height 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+}
+
+.home .bottom-link:after {
+  z-index: 1;
+  background-color: #f5f7f9;
+  top: 100%;
+}
+
+.home .bottom-link:hover:before {
+  -webkit-transform: translate3d(0, -10px, 0);
+          transform: translate3d(0, -10px, 0);
+}
+
+.home .bottom-link:hover:after {
+  height: 7.5px;
 }
 
 /* $SITEMAP

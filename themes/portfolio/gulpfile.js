@@ -73,6 +73,8 @@ gulp.task('js:watch', function () {
   gulp.watch('./static/js/*.js', ['mainjs', 'tesljs']);
 });
 
+gulp.task('js', ['vscripts', 'mainjs', 'tesljs']);
+
 /* IMG
 ------------------------------------------*/
 
@@ -86,3 +88,7 @@ gulp.task('img', function ()  {
 /* DEFAULT
  ------------------------------------------*/
 gulp.task('default', ['sass:watch', 'js:watch']);
+
+/* BUILD
+ ------------------------------------------*/
+ gulp.task('build', ['sass', 'js']);

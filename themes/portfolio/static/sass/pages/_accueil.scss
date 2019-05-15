@@ -5,12 +5,22 @@
     overflow: hidden;
     //@include base-transition();
     border: 15px solid $base-background;
+    touch-action: manipulation;
     &.new-container {
         opacity: 1;
     }
+    // on init from loader
     &.show-home {
         opacity: 0;
         border-width: 0; 
+    }
+    // on show page
+    &.show-page {
+        .bottom-link {
+            &:after, &:before {
+                height: 30px;
+            }
+        }
     }
     &.init {
         opacity: 0;
@@ -27,6 +37,7 @@
         max-width: #{900px + ($border-window-spacing - $homeBorder-size - $bootstrap-padding)*2};
         padding: 0 #{$border-window-spacing - $homeBorder-size - $bootstrap-padding};
         @extend .absolute-center;
+        
         &__nav-social {
             margin-left: 0;
             a {
@@ -36,6 +47,34 @@
                 &:focus {
                     color: $base-text-color;
                 }
+            }
+        }
+    }
+    .bottom-link { 
+        display: block;
+        @include centerer('horizontal');
+        position: fixed;
+        z-index: 1;
+        bottom: $homeBorder-size;
+        color: #ccc;
+        padding: 20px 30px;
+        // white line
+        &:before, &:after {
+            @include line('true', $color2, $width: 1px, $height: 0);
+            transition: transform 0.3s ease-in-out, height 0.3s ease-in-out;
+        }
+        &:after {
+            z-index: 1;
+            background-color: $body-background; 
+            top: 100%;
+        }
+        
+        &:hover {
+            &:before {
+                transform: translate3d(0, -10px, 0);
+            }
+            &:after {
+                height: #{$homeBorder-size / 2};
             }
         }
     }
