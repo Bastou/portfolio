@@ -588,6 +588,7 @@
             var fadeInTop = u('.smFadeInTop');
 
             var pageElementAppearsTimeline = anime.timeline();
+            var newContainer = u('body').find('.new-container');
 
             pageElementAppearsTimeline
                 .add({
@@ -617,9 +618,11 @@
                         fadeInTop.each(function(el) {
                             el.style.pointerEvents = "";
                         });
+                        newContainer.addClass('appeared')
                         that.done();
                     }
-                });
+                })
+
 
         };
     };
@@ -677,6 +680,7 @@
                         el.style.pointerEvents = "";
                     });
                     mainWrapper.removeClass('init');
+                    mainWrapper.addClass('appeared')
                 }
             });
     };
@@ -854,10 +858,12 @@
             bottomLink = pageContainer.find('.bottom-link').nodes[0];
             if(!pageContainer.hasClass('show-page')) return;
             wheelCount++;
+
             if(wheelCount > 1 && !bottomLinkedTriggered) {
                 bottomLink.click()
                 bottomLinkedTriggered = true;
                 resetWheel(); 
+                
                 // wait for end animation
                 setTimeout(function() {
                     bottomLinkedTriggered = false

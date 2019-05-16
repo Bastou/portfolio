@@ -7477,6 +7477,8 @@ body,
 .body-inner,
 .main-wrapper {
   min-height: 100vh;
+  -ms-touch-action: none;
+      touch-action: none;
 }
 
 html {
@@ -10255,6 +10257,11 @@ footer {
 /* $ACCUEIL
 ========================================================================== */
 .home {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
   overflow: hidden;
   border: 15px solid #0E112B;
   -ms-touch-action: manipulation;
@@ -10272,6 +10279,25 @@ footer {
 
 .home.show-page .bottom-link:after, .home.show-page .bottom-link:before {
   height: 30px;
+}
+
+.home.show-page .link-fx3:after {
+  -webkit-transition: -webkit-transform 0.3s ease-out 0.4s;
+  transition: -webkit-transform 0.3s ease-out 0.4s;
+  transition: transform 0.3s ease-out 0.4s;
+  transition: transform 0.3s ease-out 0.4s, -webkit-transform 0.3s ease-out 0.4s;
+}
+
+.home:not(.show-page) .link-fx3:after {
+  -webkit-transition-delay: 0s;
+          transition-delay: 0s;
+  -webkit-transform: translate3d(-105%, 0, 0);
+          transform: translate3d(-105%, 0, 0);
+}
+
+.home.appeared .link-fx3:after {
+  -webkit-transition-delay: 0s;
+          transition-delay: 0s;
 }
 
 .home.init {
@@ -10351,6 +10377,13 @@ footer {
 
 .home .bottom-link:hover:after {
   height: 7.5px;
+}
+
+.home .link-fx3:after {
+  -webkit-transition: -webkit-transform 0.3s ease-out 0.5s;
+  transition: -webkit-transform 0.3s ease-out 0.5s;
+  transition: transform 0.3s ease-out 0.5s;
+  transition: transform 0.3s ease-out 0.5s, -webkit-transform 0.3s ease-out 0.5s;
 }
 
 /* $SITEMAP

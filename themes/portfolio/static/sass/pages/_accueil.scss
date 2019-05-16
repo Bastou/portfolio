@@ -2,6 +2,11 @@
 ========================================================================== */
 
 .home {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
     overflow: hidden;
     //@include base-transition();
     border: 15px solid $base-background;
@@ -21,6 +26,21 @@
                 height: 30px;
             }
         }
+        .link-fx3:after {
+            transition: transform 0.3s ease-out 0.4s; 
+        }
+    }
+    &:not(.show-page) {
+        .link-fx3:after {
+            //transition: transform 0.5s ease-in-out; 
+            transition-delay: 0s;
+            transform: translate3d(-105%, 0, 0)
+        }
+    }
+    &.appeared {
+        .link-fx3:after {
+            transition-delay: 0s;  
+        }
     }
     &.init {
         opacity: 0;
@@ -31,13 +51,13 @@
             margin: #{$border-window-spacing - $bootstrap-padding - $homeBorder-size};
         }
     }
+    
 
     .intro {
         width: 100%;
         max-width: #{900px + ($border-window-spacing - $homeBorder-size - $bootstrap-padding)*2};
         padding: 0 #{$border-window-spacing - $homeBorder-size - $bootstrap-padding};
         @extend .absolute-center;
-        
         &__nav-social {
             margin-left: 0;
             a {
@@ -77,5 +97,9 @@
                 height: #{$homeBorder-size / 2};
             }
         }
+    }
+
+    .link-fx3:after {
+        transition: transform 0.3s ease-out 0.5s; 
     }
 }
