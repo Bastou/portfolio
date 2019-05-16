@@ -782,15 +782,51 @@
             var labItemWebFrame = u(this).find('.iframe-webpage');
 
             if(labItemWebFrame.length > 0) {
-                var iframeLink = labItemIframe.attr('data-src');
-                labItemIframe.attr('src', iframeLink);
+                var iframeLink = labItemWebFrame.attr('data-src');
+                labItemWebFrame.attr('src', iframeLink);
             }
 
             //console.log(labItemIframe);
+
+            // Reset other items
+            labItem.each(function(node, i) { 
+                var iframe = u(node).find('iframe');
+                var image = u(node).find('.listing__item__embed__thumb');
+                if(iframe) {
+                    project.resetItem(iframe, image) 
+                }
+                u(node).removeClass('active');
+            });
+            // self active
+            u(this).addClass('active'); 
+
+            // fade out imager cover
             labItemImage.addClass('fadeOut');
-            labItemIframe.nodes[0].click();
+
+            // Iframe
+            // u(this).each(function(node, i) {
+            //     if(!u(node).hasClass(active)) {
+            //         var iframe = u(node).find('iframe');
+            //         if(iframe) {
+            //             console.log();
+            //             project.resetIframe(iframe, iframe.src)
+            //         }
+            //     }
+            //     //u(node).removeClass('active');
+            // });
         })
     };
+
+    project.resetItem = function(iframe, image) {
+        if(iframe.attr('data-src') && iframe.attr('data-src').length > 0) {
+            iframe.nodes[0].src = '';
+        } else {
+            iframe.nodes[0].src += '';
+        }
+        
+        image.removeClass('fadeOut');
+        //iframe.src = src
+    }
 
     project.imgRetina = function() {
         // To make images retina, add a class "2x" to the img element
