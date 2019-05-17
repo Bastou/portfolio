@@ -1,15 +1,23 @@
 /* $VIDEO
    ========================================================================== */
 
-.video-wrapper {
-    &.ratiotv {
-        position: relative; 
-        height: 0; 
-        overflow: hidden;
-        padding-bottom: 50.6%;
-        margin-bottom: 20px;
-        > video {
-            @include centerer();
-        }
+%ratio {
+    position: relative; 
+    height: 0; 
+    overflow: hidden;
+    padding-bottom: 50.6%;
+    margin-bottom: 20px;
+    > video {
+        @include centerer();
+    }   
+}
+
+.video-wrapper { 
+    &.ratiotv { 
+        @extend %ratio;
+    }
+    &.ratio-8-16 {
+        @extend %ratio;
+        padding-bottom: 46.6%;
     }
 }   

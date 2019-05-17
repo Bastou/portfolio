@@ -3,7 +3,7 @@ title = "Altiservice"
 date = "2016-10-15T17:05:59+02:00"
 tags = ["Modular CSS (sass)", "Full responsive", "Gulp", "Google map API"]
 categories = ["general"]
-draft = false
+draft = true
 description = "Altiservice, an Engie group subsidiary, manages four large ski stations <br /> in the Pyrénées mountains : Saint-Lary, Font-Romeu Pyrénées 2000, Guzet, and Artouste. <br/> My task within Orealys agency was to develop the front-end part in order to redesign the website."
 weight = 100
 

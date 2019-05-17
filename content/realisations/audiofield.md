@@ -1,5 +1,5 @@
 +++
-title = "Audiofield - 3D Music Visualization"
+title = "Audiofield - 3D AudioViz"
 date = "2017-11-15T17:05:59+02:00"
 tags = ["Three.js/Webgl", "Js Audio API"]
 categories = ["general"]

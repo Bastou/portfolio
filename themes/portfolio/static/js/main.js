@@ -781,11 +781,6 @@
             var labItemIframe = u(this).find('iframe');
             var labItemWebFrame = u(this).find('.iframe-webpage');
 
-            if(labItemWebFrame.length > 0) {
-                var iframeLink = labItemWebFrame.attr('data-src');
-                labItemWebFrame.attr('src', iframeLink);
-            }
-
             //console.log(labItemIframe);
 
             // Reset other items
@@ -793,12 +788,18 @@
                 var iframe = u(node).find('iframe');
                 var image = u(node).find('.listing__item__embed__thumb');
                 if(iframe) {
-                    project.resetItem(iframe, image) 
+                    project.resetItem(iframe, image)  
                 }
                 u(node).removeClass('active');
             });
             // self active
             u(this).addClass('active'); 
+
+            // set src for webpages 
+            if(labItemWebFrame.length > 0) {
+                var iframeLink = labItemWebFrame.attr('data-src');                
+                labItemWebFrame.attr('src', iframeLink);
+            }
 
             // fade out imager cover
             labItemImage.addClass('fadeOut');
@@ -818,7 +819,10 @@
     };
 
     project.resetItem = function(iframe, image) {
+        console.log('reset item');
         if(iframe.attr('data-src') && iframe.attr('data-src').length > 0) {
+            console.log(iframe.attr('data-src') );
+            console.log(iframe.attr('data-src').length > 0);
             iframe.nodes[0].src = '';
         } else {
             iframe.nodes[0].src += '';

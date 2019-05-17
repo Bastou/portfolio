@@ -1,7 +1,7 @@
     /* $ACCUEIL
 ========================================================================== */
 
-.home {
+.home { 
     position: fixed;
     top: 0;
     left: 0;
@@ -27,7 +27,7 @@
             }
         }
         .link-fx3:after {
-            transition: transform 0.3s ease-out 0.4s; 
+            transition: transform 0.2s ease-out 0.45s; 
         }
     }
     &:not(.show-page) {
@@ -51,8 +51,6 @@
             margin: #{$border-window-spacing - $bootstrap-padding - $homeBorder-size};
         }
     }
-    
-
     .intro {
         width: 100%;
         max-width: #{900px + ($border-window-spacing - $homeBorder-size - $bootstrap-padding)*2};

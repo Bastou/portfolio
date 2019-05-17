@@ -83,7 +83,7 @@ $listing-item_height: 80px;
                 }
             }
             @media #{$max-small} {
-                padding: 0 $border-window-spacing-sm;
+                //padding: 0 $border-window-spacing-sm;
                 height: 300px;
             }
             &__thumb {
@@ -97,9 +97,9 @@ $listing-item_height: 80px;
                 //width: auto;
                 cursor: pointer;
                 @media #{$max-small} {
-                    left: $border-window-spacing-sm;
-                    right: $border-window-spacing-sm;
-                    height: 300px; 
+                    //left: $border-window-spacing-sm;
+                    //right: $border-window-spacing-sm;
+                    height: 300px;  
                 }
             }
             iframe {

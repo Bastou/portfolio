@@ -9691,7 +9691,6 @@ footer {
 
 @media (max-width: 768px) {
   .listing__item__embed {
-    padding: 0 30px;
     height: 300px;
   }
 }
@@ -9707,8 +9706,6 @@ footer {
 
 @media (max-width: 768px) {
   .listing__item__embed__thumb {
-    left: 30px;
-    right: 30px;
     height: 300px;
   }
 }
@@ -9726,7 +9723,7 @@ footer {
 
 /* $VIDEO
    ========================================================================== */
-.video-wrapper.ratiotv {
+.video-wrapper.ratiotv, .video-wrapper.ratio-8-16 {
   position: relative;
   height: 0;
   overflow: hidden;
@@ -9734,13 +9731,17 @@ footer {
   margin-bottom: 20px;
 }
 
-.video-wrapper.ratiotv > video {
+.video-wrapper.ratiotv > video, .video-wrapper.ratio-8-16 > video {
   position: absolute;
   top: 50%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
       -ms-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
+}
+
+.video-wrapper.ratio-8-16 {
+  padding-bottom: 46.6%;
 }
 
 /* $IFRAME
@@ -10300,10 +10301,10 @@ footer {
 }
 
 .home.show-page .link-fx3:after {
-  -webkit-transition: -webkit-transform 0.3s ease-out 0.4s;
-  transition: -webkit-transform 0.3s ease-out 0.4s;
-  transition: transform 0.3s ease-out 0.4s;
-  transition: transform 0.3s ease-out 0.4s, -webkit-transform 0.3s ease-out 0.4s;
+  -webkit-transition: -webkit-transform 0.2s ease-out 0.45s;
+  transition: -webkit-transform 0.2s ease-out 0.45s;
+  transition: transform 0.2s ease-out 0.45s;
+  transition: transform 0.2s ease-out 0.45s, -webkit-transform 0.2s ease-out 0.45s;
 }
 
 .home:not(.show-page) .link-fx3:after {
