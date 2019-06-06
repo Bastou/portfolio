@@ -28,7 +28,5 @@
     "gulp-watch": "^4.3.11",
     "natives": "^1.1.6"
   },
-  "dependencies": {
-    
-  }
+  "dependencies": {}
 }

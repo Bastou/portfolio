@@ -20,4 +20,16 @@
         @extend %ratio;
         padding-bottom: 46.6%;
     }
+    &.fit-height { 
+        padding-bottom: 0;
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        background: #0a0d21;
+        margin-bottom: 20px;
+        > video {
+            @include centerer();
+            height: 100%;
+        }   
+    }
 }   

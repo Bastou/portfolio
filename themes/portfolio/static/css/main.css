@@ -9744,6 +9744,25 @@ footer {
   padding-bottom: 46.6%;
 }
 
+.video-wrapper.fit-height {
+  padding-bottom: 0;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  background: #0a0d21;
+  margin-bottom: 20px;
+}
+
+.video-wrapper.fit-height > video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  height: 100%;
+}
+
 /* $IFRAME
    ========================================================================== */
 .iframe-container {
