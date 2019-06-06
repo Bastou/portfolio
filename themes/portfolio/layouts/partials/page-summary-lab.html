@@ -17,7 +17,7 @@
 			<video autoplay muted loop playsinline poster="{{ .Site.BaseURL }}img/lab/{{.Params.image}}">
 				<source src="{{ if .Params.video }}{{ .Site.BaseURL }}img/lab/{{.Params.video}}{{end}}" type="video/mp4" />
 			</video>
-		</div>
+		</a>
 		<!-- CODEPEN -->
         {{ else }}
         <p data-height="500" data-theme-id="27935" data-slug-hash="{{ .Params.slug_hash }}" data-default-tab="result" data-user="erevan" data-embed-version="2" data-pen-title="{{ .Title }}" data-preview="true" class="codepen">See the Pen <a href="{{ .Params.external_link }}">{{ .Title }}</a> by bastou (<a href="https://codepen.io/erevan">@erevan</a>) on <a href="https://codepen.io">CodePen</a>.</p>
