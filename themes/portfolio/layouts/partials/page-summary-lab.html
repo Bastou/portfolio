@@ -13,10 +13,10 @@
 		</div>
 		<!-- VIDEO -->
 		{{ else if eq .Params.type "video" }}
-		<div  class="video-wrapper fit-height">
+		<a href="{{ .Params.external_link }}" target="_blank" class="video-wrapper fit-height">
 			<video autoplay muted loop playsinline poster="{{ .Site.BaseURL }}img/lab/{{.Params.image}}">
 				<source src="{{ if .Params.video }}{{ .Site.BaseURL }}img/lab/{{.Params.video}}{{end}}" type="video/mp4" />
-				</video>
+			</video>
 		</div>
 		<!-- CODEPEN -->
         {{ else }}

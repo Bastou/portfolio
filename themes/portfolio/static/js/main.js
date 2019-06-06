@@ -788,6 +788,7 @@
                 var iframe = u(node).find('iframe');
                 var image = u(node).find('.listing__item__embed__thumb');
                 if (iframe) {
+                    console.log(iframe);
                     project.resetItem(iframe, image)
                 }
                 u(node).removeClass('active');
@@ -819,6 +820,7 @@
     };
 
     project.resetItem = function (iframe, image) {
+        if (!iframe.nodes[0]) return;
         if (iframe.attr('data-src') && iframe.attr('data-src').length > 0) {
             console.log(iframe.attr('data-src'));
             console.log(iframe.attr('data-src').length > 0);

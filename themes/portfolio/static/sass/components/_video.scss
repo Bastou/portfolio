@@ -13,6 +13,7 @@
 }
 
 .video-wrapper { 
+    display: block;
     &.ratiotv { 
         @extend %ratio;
     }
