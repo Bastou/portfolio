@@ -95,6 +95,10 @@
                 height: #{$homeBorder-size / 2};
             }
         }
+
+        @media #{$max-small} {
+            padding: 20vw 30vw;
+        }
     }
 
     .link-fx3:after {
