@@ -49,7 +49,7 @@
 
 
 // // // Sass utilities
-@import "helpers/_variables.scss";//nom complet du fichier car erreur sass (possibles collision avec un autre fichier) [idem pr les autres ds le mm cas]
+@import "helpers/_variables.scss"; //nom complet du fichier car erreur sass (possibles collision avec un autre fichier) [idem pr les autres ds le mm cas]
 @import "helpers/functions";
 @import "helpers/mixins";
 @import "bourbon/bourbon";
