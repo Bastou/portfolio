@@ -58,3 +58,6 @@ link-lab-title = "lab"
     name = "Lab"
     weight = 2
     url = "lab/"
+
+[markup.goldmark.renderer]
+unsafe= true

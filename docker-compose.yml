@@ -1,0 +1,12 @@
+version: '3.8'
+
+services:
+  hugo:
+    image: klakegg/hugo:0.91.2-ext # Using the extended version with SASS/SCSS support
+    container_name: hugo_portfolio
+    volumes:
+      - .:/src
+    ports:
+      - "1313:1313"
+      - "34195:34195"
+    command: server

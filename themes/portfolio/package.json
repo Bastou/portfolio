@@ -3,7 +3,10 @@
   "version": "1.0.0",
   "description": "portfolio bastien cornier",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "preinstall": "npx npm-force-resolutions",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "gulp",
+    "build": "gulp build"
   },
   "author": "Bastien",
   "license": "ISC",
@@ -29,5 +32,7 @@
     "gulp-watch": "^4.3.11",
     "natives": "^1.1.6"
   },
-  "dependencies": {}
+  "resolutions": {
+    "graceful-fs": "^4.2.11"
+  }
 }

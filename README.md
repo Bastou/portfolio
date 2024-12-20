@@ -2,33 +2,29 @@
 
 Personal folio made with Hugo, barba.js, anime.js 
 
-## Installer Hugo 
+## Installation
 
+- docker-compose up
+- Hugo server is already running on localhost:1313
+- docker compose exec hugo /bin/bash
+- cd themes/portfolio
+- npm i
+
+
+## Start
+
+- npm start
+
+If error with gulp like :
 ```
-
-$ brew install hugo
-
+ReferenceError: primordials is not defined
+    at fs.js:40:5
+    at req_ (/src/themes/portfolio/node_modules/natives/index.js:143:24)
+``` 
+You need to run : 
 ```
-Ou
-
-Utiliser [les instructions d'installation de la documentation d'Hugo](https://gohugo.io/overview/installing/).
-
-## Lancer le serveur
-
-Lancer le serveur 
-
-    $ hugo server
-
-Entrer [`localhost:1313`](https://localhost:1313) dans la barre d'adresse du navigateur.
-
-## Compiler les assets
-
-
-Dans `themes/portfolio
-```
-
-$ gulp
-
+npm run preinstall
+the re-run : npm i
 ```
 
 ## Ajouter du contenu
@@ -55,4 +51,11 @@ Génère les fichiers statiques dans public/.
 ## La documentation d'Hugo
 
  https://github.com/gohugoio/hugoDocs. 
+
+# ENVS
+
+## PROD
+
+
+
 

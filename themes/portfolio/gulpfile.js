@@ -91,4 +91,4 @@ gulp.task('default', ['sass:watch', 'js:watch']);
 
 /* BUILD
  ------------------------------------------*/
- gulp.task('build', ['sass', 'js']);
+gulp.task('build', ['sass', 'js']);
